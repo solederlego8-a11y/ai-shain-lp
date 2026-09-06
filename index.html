@@ -1214,6 +1214,8 @@ h3{font-size:clamp(18px,2vw,22px);font-weight:800;margin:0 0 12px}
 .issue-kpi{color:#FF6B47;font-weight:900;font-size:16px;margin-top:auto;padding-top:8px;border-top:1px dashed #E3E6EE}
 .lead{font-size:15px;color:#5A6378;margin:8px 0 0 0}
 @media(max-width:760px){.issues-grid{grid-template-columns:1fr}}
+/* 追従CTAはモバイルのみ表示（PCでは非表示） */
+@media(min-width:761px){.sticky-cta{display:none!important}}
 </style></head>
 <body id="page-body">
 
@@ -1252,9 +1254,6 @@ h3{font-size:clamp(18px,2vw,22px);font-weight:800;margin:0 0 12px}
 <main id="main" role="main">
 <section data-page="top" id="page-top" class="page-section">
 <a href="#main" class="skip">本文へスキップ</a>
-<div class="campaign-band" role="region" aria-label="キャンペーン情報">
-  🎉 <strong>9月末まで｜初期費用25万円キャンペーン中</strong>（通常30万円・税抜）
-</div>
 
 
 <main id="main">
@@ -1576,7 +1575,7 @@ h3{font-size:clamp(18px,2vw,22px);font-weight:800;margin:0 0 12px}
 <script>
 // 軽量スクリプト（defer）
 // 1. ヘッダーのスクロール制御
-const header=document.getElementById('siteHeader');
+const header=document.getElementById('merged-header');
 if(header){
   const onScroll=()=>{
     if(window.scrollY>40) header.classList.add('is-scrolled');
@@ -1650,9 +1649,6 @@ window.AISUMMIT_prefillPlan=(root)=>{
 </section>
 <section data-page="contact" id="page-contact" class="page-section">
 <a href="#main" class="skip">本文へスキップ</a>
-<div class="campaign-band" role="region" aria-label="キャンペーン情報">
-  🎉 <strong>9月末まで｜初期費用25万円キャンペーン中</strong>（通常30万円・税抜）
-</div>
 
 
 <main class="section">
@@ -1744,9 +1740,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 </section>
 <section data-page="privacy" id="page-privacy" class="page-section">
 <a href="#main" class="skip">本文へスキップ</a>
-<div class="campaign-band" role="region" aria-label="キャンペーン情報">
-  🎉 <strong>9月末まで｜初期費用25万円キャンペーン中</strong>（通常30万円・税抜）
-</div>
 
 
 <main class="section subpage-hero">
@@ -1772,9 +1765,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 </section>
 <section data-page="tokutei" id="page-tokutei" class="page-section">
 <a href="#main" class="skip">本文へスキップ</a>
-<div class="campaign-band" role="region" aria-label="キャンペーン情報">
-  🎉 <strong>9月末まで｜初期費用25万円キャンペーン中</strong>（通常30万円・税抜）
-</div>
 
 
 <main class="section subpage-hero">
@@ -1811,9 +1801,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 </section>
 <section data-page="company" id="page-company" class="page-section">
 <a href="#main" class="skip">本文へスキップ</a>
-<div class="campaign-band" role="region" aria-label="キャンペーン情報">
-  🎉 <strong>9月末まで｜初期費用25万円キャンペーン中</strong>（通常30万円・税抜）
-</div>
 
 
 <main class="section subpage-hero">
