@@ -1216,6 +1216,8 @@ h3{font-size:clamp(18px,2vw,22px);font-weight:800;margin:0 0 12px}
 @media(max-width:760px){.issues-grid{grid-template-columns:1fr}}
 /* 追従CTAはモバイルのみ表示（PCでは非表示） */
 @media(min-width:761px){.sticky-cta{display:none!important}}
+/* モバイルの横スクロール対策：グリッド列が内容で膨らむのを防ぐ＋長いボタン文言を折り返す */
+@media(max-width:760px){.two-col{grid-template-columns:minmax(0,1fr)!important}.two-col>*{min-width:0}.btn{white-space:normal;max-width:100%}}
 </style></head>
 <body id="page-body">
 
