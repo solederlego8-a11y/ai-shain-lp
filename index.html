@@ -1247,9 +1247,6 @@ h3{font-size:clamp(18px,2vw,22px);font-weight:800;margin:0 0 12px}
     <nav class="merged-nav" aria-label="主要ナビゲーション">
       <a href="#top" data-nav data-page="top" class="merged-nav-link">サービス紹介</a>
       <a href="#contact" data-nav data-page="contact" class="merged-nav-link">無料個別相談</a>
-      <a href="#privacy" data-nav data-page="privacy" class="merged-nav-link">プライバシーポリシー</a>
-      <a href="#tokutei" data-nav data-page="tokutei" class="merged-nav-link">特定商取引法</a>
-      <a href="#company" data-nav data-page="company" class="merged-nav-link">運営会社</a>
       <a href="blog/index.html" class="merged-nav-link">ブログ</a>
     </nav>
     <a href="#contact" class="merged-cta" data-nav>無料個別相談 →</a>
@@ -1264,9 +1261,6 @@ h3{font-size:clamp(18px,2vw,22px);font-weight:800;margin:0 0 12px}
 <nav id="merged-mobile-menu" class="merged-mobile-menu" aria-label="モバイルナビ">
   <a href="#top" data-nav>サービス紹介</a>
   <a href="#contact" data-nav>無料個別相談</a>
-  <a href="#privacy" data-nav>プライバシーポリシー</a>
-  <a href="#tokutei" data-nav>特定商取引法</a>
-  <a href="#company" data-nav>運営会社</a>
   <a href="blog/index.html">ブログ</a>
 </nav>
 
@@ -1678,6 +1672,7 @@ window.AISUMMIT_prefillPlan=(root)=>{
   <div class="progress" aria-label="進捗"><div class="progress-bar" id="progBar" style="width:50%"></div></div>
   <p class="center" id="progText" style="font-size:13px;color:var(--brand-muted)">ステップ 1 / 2</p>
   <form id="leadForm" novalidate>
+    <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
     <fieldset id="step1" class="step">
       <legend class="sr">ステップ1：基本情報</legend>
       <p><label>希望プラン<br>
@@ -1714,6 +1709,7 @@ window.AISUMMIT_prefillPlan=(root)=>{
       </label></p>
       <p><label>お問い合わせ内容（任意）<br><textarea name="message" rows="5" style="width:100%;padding:12px;border:1px solid var(--brand-line);border-radius:8px"></textarea></label></p>
       <p style="font-size:13px;color:var(--brand-muted)">送信することで<a href="#privacy">プライバシーポリシー</a>に同意したものとみなします。</p>
+      <p id="formError" hidden style="color:#c0392b;font-size:14px;background:#fdecea;border:1px solid #f5c6cb;border-radius:8px;padding:10px 12px">送信に失敗しました。通信環境をご確認のうえ、もう一度お試しください。</p>
       <p style="display:flex;gap:12px;flex-wrap:wrap">
         <button type="button" class="btn btn-outline" id="backStep1">戻る</button>
         <button type="submit" class="btn btn-primary" id="submitBtn">この内容で送信する</button>
@@ -1721,7 +1717,7 @@ window.AISUMMIT_prefillPlan=(root)=>{
     </fieldset>
     <div id="thanks" hidden style="background:#EEF3FF;padding:32px;border-radius:14px;text-align:center">
       <h2 style="color:#0B5FFF">送信ありがとうございます</h2>
-      <p>担当者より営業日2日以内にご連絡します。<br>※ 本フォームはデモ環境のため、実際には送信されません。</p>
+      <p>担当者より営業日2日以内にご連絡します。</p>
       <a class="btn btn-outline" href="#top">トップへ戻る</a>
     </div>
   </form>
@@ -1745,14 +1741,49 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('backStep1').addEventListener('click',()=>{
     s2.hidden=true;s1.hidden=false;pb.style.width='50%';pt.textContent='ステップ 1 / 2';
   });
+  const planLabel={light:'ライト',standard:'スタンダード',premium:'プレミアム',unsure:'相談したい（プラン未定）'};
+  const empLabel={'-20':'20名以下','21-100':'21〜100名','101-300':'101〜300名','301-':'301名以上'};
+  const chalLabel={apply:'若手応募が集まらない',sns:'SNS発信が続けられない',brand:'会社のイメージが古い',cost:'外注コストを抑えたい',other:'その他'};
   document.getElementById('leadForm').addEventListener('submit',e=>{
     e.preventDefault();
-    const fd=new FormData(e.target);
+    const form=e.target;
+    const fd=new FormData(form);
+    if(fd.get('_honey')){return;}
     const planMap={light:8000,standard:50000,premium:100000,unsure:50000};
     const plan=fd.get('plan')||'unsure';
     try{console.log('[event]','generate_lead',{value:planMap[plan]||0,currency:'JPY',item_name:'plan_'+(plan||'unsure')})}catch(e){}
-    [s1,s2,pb.parentElement,pt].forEach(el=>el.hidden=true);
-    thanks.hidden=false;window.scrollTo({top:0,behavior:'smooth'});
+    const submitBtn=document.getElementById('submitBtn');
+    const errBox=document.getElementById('formError');
+    if(errBox) errBox.hidden=true;
+    if(submitBtn){submitBtn.disabled=true;submitBtn.textContent='送信中…';}
+    const challenges=fd.getAll('challenges').map(v=>chalLabel[v]||v).join('、');
+    const payload={
+      '希望プラン':planLabel[plan]||plan,
+      '会社名':fd.get('company')||'',
+      'ご担当者名':fd.get('name')||'',
+      'メールアドレス':fd.get('email')||'',
+      '業種':fd.get('industry')||'',
+      '従業員数':empLabel[fd.get('employees')]||fd.get('employees')||'',
+      '課題':challenges,
+      'お問い合わせ内容':fd.get('message')||'',
+      '_subject':'【AI社員】無料個別相談の申し込み',
+      '_template':'table',
+      '_captcha':'false'
+    };
+    const ep='https://formsubmit.co/ajax/'+['naoren.38','gmail.com'].join('@');
+    fetch(ep,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(payload)})
+      .then(r=>r.json())
+      .then(d=>{
+        if(d&&(d.success===true||d.success==='true')){
+          [s1,s2,pb.parentElement,pt].forEach(el=>el.hidden=true);
+          thanks.hidden=false;window.scrollTo({top:0,behavior:'smooth'});
+        }else{throw new Error((d&&d.message)||'send failed');}
+      })
+      .catch(()=>{
+        if(submitBtn){submitBtn.disabled=false;submitBtn.textContent='この内容で送信する';}
+        if(errBox){errBox.hidden=false;errBox.scrollIntoView({block:'center',behavior:'smooth'});}
+        else{alert('送信に失敗しました。時間をおいて再度お試しください。');}
+      });
   });
 });
 </script>
@@ -1772,8 +1803,8 @@ document.addEventListener('DOMContentLoaded',()=>{
       <tr><th>3. 第三者提供</th><td>法令に基づく場合を除き、ご本人の同意なく第三者に提供することはありません。</td></tr>
       <tr><th>4. 安全管理</th><td>ISO/IEC 27001に準拠した運用を行い、暗号化通信・アクセス制限・監査ログを整備します。データは日本リージョンに保管します。</td></tr>
       <tr><th>5. Cookie・アクセス解析</th><td>サービス改善のためCookie・アクセス解析ツールを使用します。ブラウザ設定で無効化できます。</td></tr>
-      <tr><th>6. 開示・訂正・削除</th><td>ご本人からのご要望に応じて、遅滞なく対応します。詳細はサポート窓口までご連絡ください。</td></tr>
-      <tr><th>7. お問い合わせ窓口</th><td>詳細は<a href="#tokutei" data-nav>特定商取引法に基づく表記</a>のサポート窓口をご参照ください。</td></tr>
+      <tr><th>6. 開示・訂正・削除</th><td>ご本人からのご要望に応じて、遅滞なく対応します。詳細は下記お問い合わせ窓口までご連絡ください。</td></tr>
+      <tr><th>7. お問い合わせ窓口</th><td>本サイトの<a href="#contact" data-nav>無料個別相談フォーム</a>よりご連絡ください。</td></tr>
       <tr><th>8. 制定・改定</th><td>本ポリシーは予告なく改定される場合があります。改定時は本ページで公開します。</td></tr>
     </table>
     <p style="margin-top:24px"><a href="#top" class="back-link">← トップへ戻る</a></p>
@@ -1792,11 +1823,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     <h1>特定商取引法に基づく表記</h1>
     <p class="lead">AI社員サービスに関する法定記載事項です。下表の各項目は運営会社の実体情報をもとに記載しています。</p>
     <table class="subpage-table">
-      <tr><th>販売事業者</th><td>【要記入】運営会社名（屋号／登記名）</td></tr>
-      <tr><th>所在地</th><td>【要記入】本社所在地（都道府県から）</td></tr>
-      <tr><th>設立</th><td>【要記入】設立年月日</td></tr>
-      <tr><th>資本金</th><td>【要記入】資本金（円）</td></tr>
-      <tr><th>代表者</th><td>【要記入】代表取締役氏名</td></tr>
+      <tr><th>販売事業者</th><td>フォローズ</td></tr>
       <tr><th>サービス名</th><td>AI社員</td></tr>
       <tr><th>サービス内容</th><td>AI社員キャラクターによるSNS・HP・採用動画の企画・制作・運用代行および付随するコンサルティング</td></tr>
       <tr><th>初期費用</th><td>通常 300,000円（税抜）／キャンペーン価格 250,000円（税抜）（2026年9月末日までのお申込み分）</td></tr>
@@ -1810,7 +1837,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       <tr><th>表現に関する注意事項</th><td>本ページに記載されている数値・事例・効果表現は一般的な傾向を示すものであり、特定の成果を保証するものではありません。サービス利用の効果・結果は業種・市場・運用状況により異なります。</td></tr>
       <tr><th>商品以外の必要料金</th><td>通信費・電気代は利用者様負担。貴社素材提供時の送料は協議。</td></tr>
       <tr><th>引渡し時期</th><td>本サービスは役務提供型のため、商品の発送はありません。</td></tr>
-      <tr><th id="support">サポート窓口</th><td>【要記入】サポート専用メールアドレス／電話窓口（平日10:00〜18:00）</td></tr>
+      <tr><th id="support">お問い合わせ</th><td><a href="#contact" data-nav>無料個別相談フォーム</a>よりご連絡ください。</td></tr>
     </table>
     <p style="margin-top:24px"><a href="#top" class="back-link">← トップへ戻る</a></p>
   </div>
@@ -1828,16 +1855,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     <h1>運営会社</h1>
     <p class="lead">AI社員サービスを企画・運営する会社概要です。詳細情報は順次公開いたします。</p>
     <table class="subpage-table">
-      <tr><th>会社名</th><td>【要記入】運営会社名</td></tr>
-      <tr><th id="legal">所在地</th><td>【要記入】本社所在地</td></tr>
-      <tr><th>設立</th><td>【要記入】設立年月日</td></tr>
-      <tr><th>資本金</th><td>【要記入】資本金</td></tr>
-      <tr><th>代表取締役</th><td>【要記入】代表者氏名</td></tr>
+      <tr><th id="legal">会社名</th><td>フォローズ</td></tr>
       <tr><th>事業内容</th><td>AIキャラクターマーケティングの企画・制作・運用／SNS運用代行／採用ブランディング支援／上記に関するコンサルティング</td></tr>
       <tr><th>認証・準拠規格</th><td>ISO/IEC 27001 に準拠した情報セキュリティ運用／データは日本リージョンで保管</td></tr>
-      <tr><th>取引銀行</th><td>【要記入】主要取引金融機関</td></tr>
-      <tr><th>主要取引先</th><td>【要記入】取引のある主要クライアント（公開可能範囲のみ）</td></tr>
-      <tr><th>加盟団体</th><td>【要記入】加盟する業界団体</td></tr>
     </table>
     <p style="margin-top:24px"><a href="#top" class="back-link">← トップへ戻る</a></p>
   </div>
@@ -1858,9 +1878,6 @@ document.addEventListener('DOMContentLoaded',()=>{
       <ul>
         <li><a href="#top" data-nav>サービス紹介</a></li>
         <li><a href="#contact" data-nav>無料個別相談</a></li>
-        <li><a href="#privacy" data-nav>プライバシーポリシー</a></li>
-        <li><a href="#tokutei" data-nav>特定商取引法</a></li>
-        <li><a href="#company" data-nav>運営会社</a></li>
         <li><a href="blog/index.html">ブログ</a></li>
       </ul>
     </div>
