@@ -1842,8 +1842,25 @@ document.addEventListener('DOMContentLoaded',()=>{
       })
       .catch(()=>{
         if(submitBtn){submitBtn.disabled=false;submitBtn.textContent='この内容で送信する';}
-        if(errBox){errBox.hidden=false;errBox.scrollIntoView({block:'center',behavior:'smooth'});}
-        else{alert('送信に失敗しました。時間をおいて再度お試しください。');}
+        // 送信サーバー不通時は mailto フォールバック（入力内容を件名・本文に自動セット）
+        const lines=[
+          '希望プラン: '+(planLabel[plan]||plan),
+          '会社名: '+(fd.get('company')||''),
+          'ご担当者名: '+(fd.get('name')||''),
+          'メールアドレス: '+(fd.get('email')||''),
+          '業種: '+(fd.get('industry')||''),
+          '従業員数: '+(empLabel[fd.get('employees')]||fd.get('employees')||''),
+          '課題: '+challenges,
+          'お問い合わせ内容: '+(fd.get('message')||'')
+        ];
+        const mailto='mailto:'+['naoren.38','gmail.com'].join('@')+'?subject='+encodeURIComponent('【AI社員】無料個別相談の申し込み')+'&body='+encodeURIComponent(lines.join('\n'));
+        if(errBox){
+          errBox.hidden=false;
+          errBox.innerHTML='送信サーバーが応答しませんでした。お手数ですが、<a href="'+mailto+'" style="font-weight:700;color:#0B5FFF;text-decoration:underline">こちらからメールでお問い合わせ</a>いただくか、時間をおいて再度お試しください。';
+          errBox.scrollIntoView({block:'center',behavior:'smooth'});
+        }else{
+          location.href=mailto;
+        }
       });
   });
 });
