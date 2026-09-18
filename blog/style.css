@@ -78,3 +78,10 @@ hr{border:0;border-top:1px solid var(--line);margin:36px 0}
 .share-label{font-size:13px;color:var(--muted);font-weight:700;margin-right:2px}
 .share-btn{display:inline-block;font:inherit;font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;text-decoration:none;line-height:1}
 .share-btn:hover{background:var(--bg);text-decoration:none}
+.article .tldr{background:var(--bg);border-left:4px solid var(--accent,#2563eb);padding:14px 18px;margin:0 0 22px}
+.article .tldr p{margin:0 0 6px}
+.article .tldr ul{margin:0}
+.article .tablewrap{overflow-x:auto;margin:18px 0}
+.article table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.article th,.article td{padding:9px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}
+.article thead th{background:var(--bg);font-weight:700}
