@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- ga4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6023BYFDGZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6023BYFDGZ', { anonymize_ip: true });
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>建設業の日報をAIで自動作成する前に — 音声・写真から作る仕組みと、導入前に決める5つのこと｜AI社員ブログ</title>
+<meta name="description" content="建設業の作業日報・工事日報をAIで自動作成したい中小建設会社向けに、音声メモや現場写真から日報を作る仕組み、AIに任せる範囲と人が確認すべき項目、時間外労働の上限規制（2024年4月適用）との関係、導入方法の3つの型、導入前に決める5つのことを整理します。">
+<meta name="theme-color" content="#0B5FFF">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://solederlego8-a11y.github.io/ai-shain-lp/blog/kensetsu-nippo-ai-jidoka.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI社員">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://solederlego8-a11y.github.io/ai-shain-lp/blog/kensetsu-nippo-ai-jidoka.html">
+<meta property="og:title" content="建設業の日報をAIで自動作成する前に — 音声・写真から作る仕組みと、導入前に決める5つのこと">
+<meta property="og:description" content="建設業の作業日報・工事日報をAIで自動作成したい中小建設会社向けに、音声メモや現場写真から日報を作る仕組み、AIに任せる範囲と人が確認すべき項目、時間外労働の上限規制（2024年4月適用）との関係、導入方法の3つの型、導入前に決める5つのことを整理します。">
+<meta property="og:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+<!-- ga4-cv -->
+<script>
+if(typeof gtag==='function'){document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('data-cv-tracked'))return;var h=a.href||'';var has=function(s){return h.indexOf(s)>-1;};var asp=has('a8.net')?'a8':(has('rakuten.co.jp')||has('r10.to'))?'rakuten':(has('amazon.co.jp')||has('amzn.'))?'amazon':'';if(asp){gtag('event','affiliate_click',{asp:asp,link_url:h,link_text:(a.innerText||'').trim().slice(0,80),page_path:location.pathname});}else if(has('buy.stripe.com')){gtag('event','begin_checkout',{link_url:h,page_path:location.pathname});}},true);document.addEventListener('submit',function(e){var f=e.target;gtag('event','generate_lead',{form_id:f.id||f.getAttribute('data-subject')||f.action||'',page_path:location.pathname});},true);}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "建設業の日報をAIで自動作成する前に — 音声・写真から作る仕組みと、導入前に決める5つのこと", "description": "建設業の作業日報・工事日報をAIで自動作成したい中小建設会社向けに、音声メモや現場写真から日報を作る仕組み、AIに任せる範囲と人が確認すべき項目、時間外労働の上限規制（2024年4月適用）との関係、導入方法の3つの型、導入前に決める5つのことを整理します。", "datePublished": "2026-10-02", "dateModified": "2026-10-02", "inLanguage": "ja", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://solederlego8-a11y.github.io/ai-shain-lp/blog/kensetsu-nippo-ai-jidoka.html"}, "author": {"@type": "Organization", "name": "AI社員 編集部", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/"}, "publisher": {"@type": "Organization", "name": "AI社員", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/", "parentOrganization": {"@type": "Organization", "@id": "https://solederlego8-a11y.github.io/#org", "name": "フォローズ"}}, "image": "https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg"}
+</script>
+<!-- faq-schema -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "現場の騒音の中でも、音声メモから日報を作れますか。", "acceptedAnswer": {"@type": "Answer", "text": "騒音が大きいと文字起こしの精度は下がります。休憩時間や車内など、比較的静かな場所でまとめて話す、要点を短く区切って話す、といった工夫で精度を上げられます。数字や固有名詞は、人が確認する前提で運用してください。"}}, {"@type": "Question", "name": "元請や発注者に提出する様式にも対応できますか。", "acceptedAnswer": {"@type": "Answer", "text": "様式の項目と記入例があれば、その項目に合わせて下書きを作る形は検討できます。ただし、提出前の確認と最終的な責任は自社にあります。発注者によって様式が違う場合は、様式ごとにルールを整理する必要があります。"}}, {"@type": "Question", "name": "年配の職人でも使えますか。", "acceptedAnswer": {"@type": "Answer", "text": "新しいアプリの操作を覚えるのではなく、スマートフォンに話す、写真を撮って送るといった普段の操作で記録できる形にすれば、使い始めのハードルを下げられます。最初は1つの現場で試し、使いにくい点を聞きながら調整するのがおすすめです。"}}, {"@type": "Question", "name": "AIが作った日報に間違いがあった場合の責任は。", "acceptedAnswer": {"@type": "Answer", "text": "日報は、確認・承認した人と会社の記録です。AIは下書きを作るまでの道具として使い、人数・時間・数量・安全に関する記載は必ず人が確認してから承認する運用にしてください。"}}, {"@type": "Question", "name": "日報以外の書類にも使えますか。", "acceptedAnswer": {"@type": "Answer", "text": "作業報告書、打ち合わせの議事録、見積書の下書きなども、決まった様式があれば同じ考え方で下書きを作れます。まず日報で効果を確かめてから、対象を広げていくと無理がありません。"}}]}
+</script>
+</head>
+<body>
+
+<header class="b-header">
+  <div class="b-header-inner">
+    <a class="b-logo" href="../index.html"><span class="mark">🪄</span><span>AI社員</span></a>
+    <nav class="b-nav" aria-label="ナビゲーション">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#company">運営会社</a> <a href="https://solederlego8-a11y.github.io/">運営メディア一覧</a>
+      <a href="index.html">ブログ</a>
+    </nav>
+    <a class="b-cta" href="../index.html#contact">無料個別相談 →</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="index.html">← ブログ一覧</a> ／ 業務自動化</p>
+    <h1>建設業の日報をAIで自動作成する前に —<br>音声・写真から作る仕組みと、導入前に決める5つのこと</h1>
+    <p class="lead">日報のAI化は、ツール選びより先に「誰が、いつ、何を入力し、誰が確認するか」を決めることが成否を分けます。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap article">
+    <p class="byline">AI社員 編集部</p>
+    <p><time datetime="2026-10-02">2026年10月2日</time></p>
+<div class="tldr">
+  <p><strong>この記事の結論</strong></p>
+  <ul>
+    <li>建設業の日報で時間がかかっているのは、現場の判断ではなく「現場から戻って、決まった様式に書き直す」作業です。音声メモ・写真・箇条書きを現場で残し、AIが自社の様式に整える形にすると、この書き直しの時間を減らせます</li>
+    <li>AIに任せるのは「整える・まとめる・転記する」まで。人数・作業時間・数量・安全上の事項・事故やヒヤリハットの記録は、必ず人が確認します。日報は後から工程や原価、労働時間を確認する記録にもなるためです</li>
+    <li>建設業には2024年4月から時間外労働の上限規制が適用されています（<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/gyosyu/topics/01.html" target="_blank" rel="noopener">厚生労働省</a>）。事務作業の時間を減らすことは、現場の時間を確保するうえでも意味があります。導入前に「様式・入力者・確認者・保存先・例外の扱い」の5つを決めておきます</li>
+  </ul>
+</div>
+
+<p>「建設業 日報 AI」「工事日報 自動作成」「作業日報 音声入力」と検索している方は、現場監督や職長が日報の作成に毎日時間を取られていて、それを減らす方法を探している段階だと思います。現場が終わってから事務所に戻り、手書きのメモや記憶を頼りに日報を書く。協力会社から届いた日報を自社の様式に書き写す。写真を整理して工事写真台帳に貼る。こうした作業は、現場の仕事が終わった後の時間に積み重なっていきます。</p>
+<p>この記事では、特定の製品を比較するのではなく、建設業の日報をAIで作る仕組みと、導入前に社内で決めておくべきことを整理します。AIによる業務自動化の全体像は<a href="ai-gyomu-jidoka.html">AIで業務自動化｜中小企業の始め方・費用</a>で紹介しているため、本記事は「建設業の日報」に絞って、導入直前に確認すべき点を深掘りします。</p>
+
+<h2>なぜ今、日報の作業時間を減らす必要があるのか</h2>
+<p>建設業では、2024年4月から時間外労働の上限規制が適用されています。厚生労働省によると、災害時の復旧・復興の事業を除き、原則として月45時間・年360時間が上限となり、特別条項付きの36協定を結ぶ場合でも、年720時間、単月100時間未満（休日労働を含む）、複数月平均80時間以内（休日労働を含む）といった制限があります（<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/gyosyu/topics/01.html" target="_blank" rel="noopener">厚生労働省「建設業・ドライバー・医師等の時間外労働の上限規制」</a>）。</p>
+<p>現場の作業時間は、工期や天候に左右されるため、簡単には減らせません。一方で、日報・写真整理・書類作成といった事務作業は、やり方を変えることで減らせる余地があります。日報のAI化は、事務作業の時間を減らし、その分を現場の段取りや休息に回すための手段の一つです。</p>
+
+<h2>日報作成の作業を分解する</h2>
+<p>日報の作成も、いくつかの作業に分けて考えると、どこにAIを使えるかが見えてきます。</p>
+<table>
+  <tr><th>作業</th><th>現状でよくある形</th><th>AIとの相性</th></tr>
+  <tr><td>現場で記録する</td><td>手帳へのメモ、記憶</td><td>音声メモ・写真で残す形に変えれば、AIが読み取れる</td></tr>
+  <tr><td>様式に整える</td><td>事務所に戻ってパソコンで清書</td><td>高い。音声やメモを決まった項目に振り分けて文章にできる</td></tr>
+  <tr><td>協力会社の日報を集約する</td><td>紙・FAX・写真で届いたものを書き写す</td><td>高い。読み取って自社の様式に転記できる</td></tr>
+  <tr><td>写真を整理する</td><td>撮影日・場所・工種ごとに手作業で仕分け</td><td>写真の説明文の下書きや、日報との紐づけに使える</td></tr>
+  <tr><td>確認・承認する</td><td>上長が内容を確認して押印・承認</td><td>人が行う。AIは確認しやすい形に整えるまで</td></tr>
+  <tr><td>翌日の予定を立てる</td><td>日報の「明日の予定」欄に記入</td><td>前日の内容から下書きはできるが、判断は人</td></tr>
+</table>
+<p>時間の多くを占めているのは、「様式に整える」「協力会社の日報を集約する」の2つであることが多いはずです。ここをAIに任せると、現場監督は「現場で話して、戻ってから確認するだけ」という形に近づけます。</p>
+
+<h2>音声・写真から日報を作る流れ</h2>
+<p>AIで日報を作る場合の基本的な流れは、次のとおりです。</p>
+<ol>
+  <li><strong>現場で記録する</strong>：作業の区切りや終業時に、スマートフォンで音声メモを残す（例：「基礎の配筋完了、明日から型枠、午後は雨で1時間中断」）。必要に応じて写真を撮る。</li>
+  <li><strong>AIが整える</strong>：音声を文字にし、自社の日報様式の項目（作業内容・人員・天候・進捗・明日の予定・特記事項など）に振り分けて、日報の文章を作る。</li>
+  <li><strong>人が確認する</strong>：人数・時間・数量などの数字と、安全に関する記載を確認し、必要なら修正して承認する。</li>
+  <li><strong>保存・共有する</strong>：承認された日報を、決められた保存先（共有フォルダ・スプレッドシート・既存のシステム）に保存し、関係者に共有する。</li>
+</ol>
+<p>大切なのは、現場で記録する人の負担を増やさないことです。新しいアプリの操作を覚える必要があると、忙しい現場ほど使われなくなります。普段使っているスマートフォンの音声メモやチャットに送るだけ、といった形にできるかどうかが、定着を左右します。</p>
+
+<h2>AIに任せる範囲と、人が必ず確認する項目</h2>
+<p>日報は、その日の記録であると同時に、後から工程の遅れの原因を調べたり、原価を確認したり、労働時間を振り返ったりするための記録にもなります。AIが作った文章をそのまま承認するのではなく、次の項目は人が確認してください。</p>
+<table>
+  <tr><th>項目</th><th>人が確認する理由</th></tr>
+  <tr><td>人員・作業時間</td><td>労働時間の管理や、協力会社への支払いの根拠になる</td></tr>
+  <tr><td>数量・出来高</td><td>工程管理・原価管理・出来高の請求に関わる</td></tr>
+  <tr><td>安全に関する事項</td><td>KY活動の内容、ヒヤリハット、事故の記録は正確さが求められる</td></tr>
+  <tr><td>発注者・元請との合意事項</td><td>指示や変更の記録は、後の協議の根拠になる</td></tr>
+  <tr><td>天候・中断の理由</td><td>工期の遅れの理由を説明する材料になる</td></tr>
+</table>
+<p>AIは、音声が聞き取りにくい場合や、専門用語・現場の略語が多い場合に、内容を取り違えることがあります。最初のうちは、AIがよく間違える言葉を記録し、用語の一覧として登録していくと精度が上がります。</p>
+
+<h2>協力会社からの日報を集約する場合</h2>
+<p>元請として複数の協力会社が入る現場では、協力会社ごとに紙・FAX・写真・メールなど形式の違う日報が届き、それを自社の様式に書き写す作業が発生しがちです。この集約の作業は、AIが特に力を発揮しやすい部分です。届いた日報を読み取り、会社名・人数・作業内容・作業時間を自社の様式に転記する下書きを作れば、担当者は転記ではなく確認に時間を使えます。</p>
+<p>ただし、協力会社の日報は手書きのくせ字や略語が多く、読み取りを間違えることがあります。特に人数と作業時間は、協力会社への支払いや労働時間の確認に関わるため、元の日報と並べて確認できる形にしておくことが大切です。また、協力会社の情報を外部のサービスで処理することについて、取引先との契約上の制限がないかも事前に確認してください。</p>
+
+<h2>工事写真との紐づけ</h2>
+<p>日報と工事写真は、本来セットで見返したい記録です。ところが実際には、日報はパソコンの中、写真はスマートフォンや別のフォルダの中、とばらばらに保存され、後から「この日の作業の写真はどれか」を探すのに時間がかかることがあります。</p>
+<p>音声メモと写真を同じタイミングで送る形にしておくと、AIが日報を作る際に、その日の写真の一覧と簡単な説明文の下書きもあわせて作ることができます。写真の説明文（どこで、何の作業を、どの段階で撮ったか）は、工事写真台帳の整理にもそのまま使えます。ただし、発注者が写真の撮り方や台帳の様式を指定している場合は、その指定が優先です。</p>
+
+<h2>導入方法の3つの型</h2>
+<p>建設業の日報をAIで作る方法は、大きく3つの型に分けられます。具体的な費用は製品・依頼先によって異なるため、ここでは型ごとの特徴を整理します。</p>
+<table>
+  <tr><th>型</th><th>内容</th><th>向いているケース</th><th>注意点</th></tr>
+  <tr><td>汎用のAIツールを使う</td><td>音声の文字起こしと文章の整形を、汎用のAIサービスで行う</td><td>まず小さく試したい、現場監督が数人</td><td>様式への振り分けや保存は手作業が残る。情報の取扱い条件を確認</td></tr>
+  <tr><td>施工管理のアプリを使う</td><td>日報・写真・工程を管理するアプリの機能を使う</td><td>日報だけでなく、写真や工程もまとめて管理したい</td><td>自社の様式や発注者指定の様式に合わせられるか確認</td></tr>
+  <tr><td>自社の様式に合わせた仕組みを作る</td><td>自社の日報様式・協力会社からの集約・既存の保存先に合わせて組み立てる</td><td>様式が独自、発注者ごとに様式が違う、既存のスプレッドシートを使い続けたい</td><td>初期の設計に時間がかかる。様式や用語の整理が必要</td></tr>
+</table>
+<p>どの型でも、「今の日報の様式を変えずに済むか」「現場の人が新しい操作を覚えずに済むか」は確認しておきたい点です。様式の変更が必要な場合は、元請や発注者への影響も含めて検討します。</p>
+
+<h2>導入前に決める5つのこと</h2>
+<ol>
+  <li><strong>様式</strong>：どの日報（社内用・元請提出用・協力会社からの日報）を対象にするか。項目の一覧と記入例を用意する。</li>
+  <li><strong>入力者と入力の方法</strong>：誰が、いつ、どの方法（音声メモ・チャット・写真）で記録を残すか。</li>
+  <li><strong>確認者</strong>：AIが作った日報を誰が確認・承認するか。確認する項目（人員・時間・数量・安全）を決めておく。</li>
+  <li><strong>保存先</strong>：承認された日報をどこに保存するか。既存の共有フォルダやスプレッドシートを使い続けるか。</li>
+  <li><strong>例外の扱い</strong>：事故・災害・ヒヤリハットなど、通常と違う記録が必要なときに、AIを通さずに人が書くルール。</li>
+</ol>
+<p>この5つが決まっていないままツールを入れると、「使う人と使わない人がいる」「AIが作った日報を誰も確認していない」といった状態になりがちです。まず1つの現場、1人の現場監督で試し、修正が多かった点を見直してから広げると、定着しやすくなります。</p>
+
+<h2>試験導入の進め方（4週間の目安）</h2>
+<table>
+  <tr><th>時期</th><th>やること</th></tr>
+  <tr><td>1週目</td><td>対象の日報様式と記入例を集める。試す現場と現場監督を1人決める</td></tr>
+  <tr><td>2週目</td><td>音声メモから日報を作る流れで試す。AIの下書きと、従来の書き方の日報を並べて比べる</td></tr>
+  <tr><td>3週目</td><td>間違いやすい用語・項目を整理し、ルールに反映する。確認にかかる時間を記録する</td></tr>
+  <tr><td>4週目</td><td>作成にかかった時間、修正の量、使い続けたいかどうかを現場監督に確認し、広げるかを判断する</td></tr>
+</table>
+
+<h2>AI社員で日報作成を任せる場合</h2>
+<p><a href="../index.html">AI社員</a>では、採用・発信の自動化に加えて、日報・作業報告・議事録の作成も自動化の対象にしています。現場からの音声メモ・写真・箇条書きを御社の定型フォーマットに整形し、担当者は確認・承認するだけ、という「下書きまでAI、確認と承認は人」の原則で運用します。新しいシステムを入れるのではなく、いま使っているメール・スプレッドシート・チャットの中で動く形にするため、現場の人が新しいアプリの操作を覚える必要はありません。</p>
+<p>日報作成の自動化の費用は、日報の種類・現場の数・協力会社からの集約の有無など、業務の内容と量によって個別にお見積りしています。<a href="../index.html#contact">無料個別相談</a>では、現在の日報の様式と作成の流れをお聞きし、どこまでをAIに任せられるかを一緒に棚卸しします。施工管理アプリなど既製のツールの方が合う場合は、そのようにお伝えします。建設業の採用発信もあわせて考えたい方は、<a href="kensetsu-seizo-sns-saiyo.html">「地味な業種」ほどSNS採用で伸びる — 建設業・製造業の発信の作り方</a>もご覧ください。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. 現場の騒音の中でも、音声メモから日報を作れますか。</h3>
+<p>騒音が大きいと文字起こしの精度は下がります。休憩時間や車内など、比較的静かな場所でまとめて話す、要点を短く区切って話す、といった工夫で精度を上げられます。数字や固有名詞は、人が確認する前提で運用してください。</p>
+<h3>Q. 元請や発注者に提出する様式にも対応できますか。</h3>
+<p>様式の項目と記入例があれば、その項目に合わせて下書きを作る形は検討できます。ただし、提出前の確認と最終的な責任は自社にあります。発注者によって様式が違う場合は、様式ごとにルールを整理する必要があります。</p>
+<h3>Q. 年配の職人でも使えますか。</h3>
+<p>新しいアプリの操作を覚えるのではなく、スマートフォンに話す、写真を撮って送るといった普段の操作で記録できる形にすれば、使い始めのハードルを下げられます。最初は1つの現場で試し、使いにくい点を聞きながら調整するのがおすすめです。</p>
+<h3>Q. AIが作った日報に間違いがあった場合の責任は。</h3>
+<p>日報は、確認・承認した人と会社の記録です。AIは下書きを作るまでの道具として使い、人数・時間・数量・安全に関する記載は必ず人が確認してから承認する運用にしてください。</p>
+<h3>Q. 日報以外の書類にも使えますか。</h3>
+<p>作業報告書、打ち合わせの議事録、見積書の下書きなども、決まった様式があれば同じ考え方で下書きを作れます。まず日報で効果を確かめてから、対象を広げていくと無理がありません。</p>
+
+<div class="note">本記事は建設業の日報作成へのAI活用に関する一般的な考え方を整理したものであり、特定の効果を保証するものではありません。労働時間の管理や法令上の記録義務については、所管の行政機関や専門家にご確認ください。</div>
+<hr>
+    <p>関連記事：<a href="ai-gyomu-jidoka.html">AIで業務自動化｜中小企業の始め方・費用</a> ／ <a href="kensetsu-seizo-sns-saiyo.html">建設業・製造業の発信の作り方</a> ／ <a href="toiawase-ichiji-taiou-ai-jidoka.html">問い合わせの一次対応をAIで自動化する前に</a></p>
+    <a class="back" href="index.html">← ブログ一覧に戻る</a>
+
+    <div class="share" aria-label="この記事をシェア">
+      <span class="share-label">シェア：</span>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=%E5%BB%BA%E8%A8%AD%E6%A5%AD%E3%81%AE%E6%97%A5%E5%A0%B1%E3%82%92AI%E3%81%A7%E8%87%AA%E5%8B%95%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB%20%E2%80%94%20%E9%9F%B3%E5%A3%B0%E3%83%BB%E5%86%99%E7%9C%9F%E3%81%8B%E3%82%89%E4%BD%9C%E3%82%8B%E4%BB%95%E7%B5%84%E3%81%BF%E3%81%A8%E3%80%81%E5%B0%8E%E5%85%A5%E5%89%8D%E3%81%AB%E6%B1%BA%E3%82%81%E3%82%8B5%E3%81%A4%E3%81%AE%E3%81%93%E3%81%A8&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fchusho-saiyo-hasshin.html">X</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fchusho-saiyo-hasshin.html&amp;title=%E5%BB%BA%E8%A8%AD%E6%A5%AD%E3%81%AE%E6%97%A5%E5%A0%B1%E3%82%92AI%E3%81%A7%E8%87%AA%E5%8B%95%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB%20%E2%80%94%20%E9%9F%B3%E5%A3%B0%E3%83%BB%E5%86%99%E7%9C%9F%E3%81%8B%E3%82%89%E4%BD%9C%E3%82%8B%E4%BB%95%E7%B5%84%E3%81%BF%E3%81%A8%E3%80%81%E5%B0%8E%E5%85%A5%E5%89%8D%E3%81%AB%E6%B1%BA%E3%82%81%E3%82%8B5%E3%81%A4%E3%81%AE%E3%81%93%E3%81%A8">はてブ</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fchusho-saiyo-hasshin.html">LINE</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fchusho-saiyo-hasshin.html">Facebook</a>
+      <button type="button" class="share-btn share-copy" data-url="https://solederlego8-a11y.github.io/ai-shain-lp/blog/kensetsu-nippo-ai-jidoka.html">リンクをコピー</button>
+    </div>
+    <script src="share.js"></script>
+
+    <div class="cta-box">
+      <p>「うちは何から直すべきか」を30分で整理します</p>
+      <a class="btn" href="../index.html#contact">無料個別相談を予約する</a>
+    </div>
+  </div>
+</main>
+
+<footer class="b-footer">
+  <div class="b-footer-inner">
+    <div>
+      <p class="b-foot-brand">🪄 AI社員</p>
+      <p style="font-size:13px;color:#9AA6BB;margin:0;max-width:32em">中小企業の採用・発信をチームの戦力化で解決するAIキャラクターサービス。</p>
+    </div>
+    <div class="b-foot-links">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#privacy">プライバシーポリシー</a>
+      <a href="../index.html#tokutei">特定商取引法に基づく表記</a>
+      <a href="../index.html#company">運営会社</a>
+      <a href="index.html">ブログ</a>
+      <a href="editorial-policy.html">編集方針</a>
+    </div>
+  </div>
+  <div class="b-foot-bottom">© 2026 AI社員 All rights reserved.</div>
+</footer>
+
+</body>
+</html>

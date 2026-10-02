@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- ga4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6023BYFDGZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6023BYFDGZ', { anonymize_ip: true });
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>問い合わせの一次対応をAIで自動化する前に — 中小企業が決める「任せる範囲」と費用の考え方｜AI社員ブログ</title>
+<meta name="description" content="問い合わせメールやフォームの一次対応をAIで自動化したい中小企業向けに、AIに任せられる作業と人が残すべき判断、全自動返信を避けるべき理由、個人情報の扱い（個人情報保護委員会の注意喚起）、費用の3つの型、導入前に準備するデータを整理します。">
+<meta name="theme-color" content="#0B5FFF">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://solederlego8-a11y.github.io/ai-shain-lp/blog/toiawase-ichiji-taiou-ai-jidoka.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI社員">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://solederlego8-a11y.github.io/ai-shain-lp/blog/toiawase-ichiji-taiou-ai-jidoka.html">
+<meta property="og:title" content="問い合わせの一次対応をAIで自動化する前に — 中小企業が決める「任せる範囲」と費用の考え方">
+<meta property="og:description" content="問い合わせメールやフォームの一次対応をAIで自動化したい中小企業向けに、AIに任せられる作業と人が残すべき判断、全自動返信を避けるべき理由、個人情報の扱い（個人情報保護委員会の注意喚起）、費用の3つの型、導入前に準備するデータを整理します。">
+<meta property="og:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+<!-- ga4-cv -->
+<script>
+if(typeof gtag==='function'){document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('data-cv-tracked'))return;var h=a.href||'';var has=function(s){return h.indexOf(s)>-1;};var asp=has('a8.net')?'a8':(has('rakuten.co.jp')||has('r10.to'))?'rakuten':(has('amazon.co.jp')||has('amzn.'))?'amazon':'';if(asp){gtag('event','affiliate_click',{asp:asp,link_url:h,link_text:(a.innerText||'').trim().slice(0,80),page_path:location.pathname});}else if(has('buy.stripe.com')){gtag('event','begin_checkout',{link_url:h,page_path:location.pathname});}},true);document.addEventListener('submit',function(e){var f=e.target;gtag('event','generate_lead',{form_id:f.id||f.getAttribute('data-subject')||f.action||'',page_path:location.pathname});},true);}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "問い合わせの一次対応をAIで自動化する前に — 中小企業が決める「任せる範囲」と費用の考え方", "description": "問い合わせメールやフォームの一次対応をAIで自動化したい中小企業向けに、AIに任せられる作業と人が残すべき判断、全自動返信を避けるべき理由、個人情報の扱い（個人情報保護委員会の注意喚起）、費用の3つの型、導入前に準備するデータを整理します。", "datePublished": "2026-10-02", "dateModified": "2026-10-02", "inLanguage": "ja", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://solederlego8-a11y.github.io/ai-shain-lp/blog/toiawase-ichiji-taiou-ai-jidoka.html"}, "author": {"@type": "Organization", "name": "AI社員 編集部", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/"}, "publisher": {"@type": "Organization", "name": "AI社員", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/", "parentOrganization": {"@type": "Organization", "@id": "https://solederlego8-a11y.github.io/#org", "name": "フォローズ"}}, "image": "https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg"}
+</script>
+<!-- faq-schema -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AIが作った返信を、そのまま自動で送ってもよいですか。", "acceptedAnswer": {"@type": "Answer", "text": "受付の連絡など、内容が完全に決まっている定型の返信であれば自動送信も選択肢になります。金額・納期・可否・謝罪など、判断や約束を含む返信は、人が確認してから送る運用をおすすめします。"}}, {"@type": "Question", "name": "問い合わせが月に数十件程度でも、導入する意味はありますか。", "acceptedAnswer": {"@type": "Answer", "text": "件数が少なくても、担当者が1人で他の業務と兼務している場合は、返信の遅れや対応漏れを減らす効果が期待できます。まずはメールソフトの既存機能など、費用のかからない方法で効果を確かめるのも一つの方法です。"}}, {"@type": "Question", "name": "個人情報をAIに入力しても問題ありませんか。", "acceptedAnswer": {"@type": "Answer", "text": "利用目的の範囲内か、入力した情報がAIの学習に使われないか、どこに保存されるかを確認する必要があります。個人情報保護委員会の注意喚起も参考に、自社のプライバシーポリシーと使うサービスの規約を確認してください。"}}, {"@type": "Question", "name": "専門的な問い合わせにもAIは対応できますか。", "acceptedAnswer": {"@type": "Answer", "text": "過去の問い合わせと回答、社内のルールを整理して渡すことで、要約・分類・不足確認の精度は上げられます。ただし専門的な判断そのものは、人が確認して行う前提で運用してください。"}}, {"@type": "Question", "name": "導入までどれくらいかかりますか。", "acceptedAnswer": {"@type": "Answer", "text": "既存ツールの設定であれば数日で始められることもあります。自社の業務に合わせた仕組みを作る場合は、過去データの整理とルールづくりに時間がかかるため、準備するデータの量と範囲によって変わります。"}}]}
+</script>
+</head>
+<body>
+
+<header class="b-header">
+  <div class="b-header-inner">
+    <a class="b-logo" href="../index.html"><span class="mark">🪄</span><span>AI社員</span></a>
+    <nav class="b-nav" aria-label="ナビゲーション">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#company">運営会社</a> <a href="https://solederlego8-a11y.github.io/">運営メディア一覧</a>
+      <a href="index.html">ブログ</a>
+    </nav>
+    <a class="b-cta" href="../index.html#contact">無料個別相談 →</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="index.html">← ブログ一覧</a> ／ 業務自動化</p>
+    <h1>問い合わせの一次対応をAIで自動化する前に —<br>中小企業が決める「任せる範囲」と費用の考え方</h1>
+    <p class="lead">「AIに返信まで任せたい」と考える前に、どこまでをAIに渡し、どこからを人が持つかを決めておくと、導入後のトラブルを大きく減らせます。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap article">
+    <p class="byline">AI社員 編集部</p>
+    <p><time datetime="2026-10-02">2026年10月2日</time></p>
+<div class="tldr">
+  <p><strong>この記事の結論</strong></p>
+  <ul>
+    <li>問い合わせ対応でAIに任せやすいのは「読む・分ける・不足を見つける・下書きを作る・記録する」の5つです。見積金額の確定、納期の約束、クレームへの謝罪、契約条件の判断は、人が持つべき領域です</li>
+    <li>中小企業が最初に目指すのは「全自動返信」ではなく「人が確認して送るだけの状態」です。初回返信までの時間を縮めながら、誤った回答が顧客に届くリスクを抑えられます</li>
+    <li>問い合わせには氏名・連絡先などの個人情報が含まれます。AIに入力する前に、利用目的の範囲内か、入力した情報がどう扱われるかを確認します（<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/" target="_blank" rel="noopener">個人情報保護委員会の注意喚起</a>）。費用は「既存ツールの設定」「問い合わせ管理ツール」「自社の業務に合わせた仕組み」の3つの型で大きく変わります</li>
+  </ul>
+</div>
+
+<p>「問い合わせ 一次対応 AI」「問い合わせ 自動返信 AI 中小企業」と検索している方は、問い合わせへの返信が遅れて機会を逃している、担当者が1人しかいなくて休むと止まる、同じ質問に何度も答えている、といった課題をすでに感じている段階だと思います。AIで返信を作れることは知っていても、「どこまで任せて大丈夫なのか」「いくらかかるのか」「何から準備すればいいのか」が分からないまま、導入の判断ができずにいるのではないでしょうか。</p>
+<p>この記事では、特定のツールを比較するのではなく、問い合わせの一次対応をAIで自動化する前に社内で決めておくべきことを、作業の分解・任せる範囲・個人情報・費用・準備の順に整理します。AIによる業務自動化の全体像は<a href="ai-gyomu-jidoka.html">AIで業務自動化｜中小企業の始め方・費用</a>で紹介しているため、本記事は「問い合わせ対応」に絞って、導入直前に確認すべき点を深掘りします。</p>
+
+<h2>問い合わせ対応を5つの作業に分解する</h2>
+<p>「問い合わせ対応」とひとことで言っても、実際にはいくつもの作業が含まれています。AIに任せられるかどうかは、この作業単位で判断します。</p>
+<table>
+  <tr><th>作業</th><th>内容</th><th>AIとの相性</th></tr>
+  <tr><td>1. 読む</td><td>メール・フォーム・チャットで届いた内容を読み、何についての問い合わせかを把握する</td><td>高い。長文や要点が散らばった文章の要約は得意</td></tr>
+  <tr><td>2. 分ける</td><td>見積依頼・納期確認・採用応募・営業メール・クレームなどに分類し、担当者に振り分ける</td><td>高い。分類のルールと例があれば精度が上がる</td></tr>
+  <tr><td>3. 不足を見つける</td><td>見積に必要な数量・仕様・希望納期・設置場所などが書かれているかを確認する</td><td>高い。必要項目の一覧を渡せば抜けを指摘できる</td></tr>
+  <tr><td>4. 下書きを作る</td><td>受付の連絡、不足情報の確認、よくある質問への回答の文面を作る</td><td>高い。ただし内容の正しさは人の確認が必要</td></tr>
+  <tr><td>5. 記録する</td><td>問い合わせの内容と対応状況をスプレッドシートや管理表に記録する</td><td>高い。転記の手間と漏れを減らせる</td></tr>
+  <tr><td>6. 判断して約束する</td><td>金額・納期・可否を判断し、顧客に約束する</td><td>低い。人が判断し、責任を持つ領域</td></tr>
+</table>
+<p>多くの中小企業で時間がかかっているのは、実は6の判断そのものではなく、1〜5の「判断の前後の作業」です。問い合わせを読み、何が足りないかを見つけ、確認のメールを書き、記録する。この部分をAIに任せるだけでも、担当者が判断に使える時間は増えます。</p>
+
+<h2>人が残すべき判断 — ここはAIに任せない</h2>
+<p>AIは、もっともらしい文章を作ることは得意ですが、その内容が自社の実情と合っているかを保証することはできません。次のような内容は、AIが下書きを作ったとしても、必ず人が判断・確認してから送ります。</p>
+<ul>
+  <li><strong>金額</strong>：見積金額、値引き、追加費用の有無</li>
+  <li><strong>納期・日程</strong>：納品日、工事日、訪問日の約束</li>
+  <li><strong>可否</strong>：対応できる・できないの判断、対応エリア、仕様の可否</li>
+  <li><strong>謝罪・クレーム対応</strong>：不具合や遅延に対するお詫び、補償の判断</li>
+  <li><strong>契約・法務</strong>：契約条件、保証の範囲、個人情報の扱いに関する回答</li>
+</ul>
+<p>これらをAIが自動で返信してしまうと、たとえば実際にはできない納期を約束してしまう、存在しない割引を案内してしまう、といった事故につながります。一度顧客に送った約束は取り消しにくく、信頼の損失は返信の遅れよりも大きくなりがちです。</p>
+
+<h2>「全自動返信」より「確認して送るだけ」を目指す理由</h2>
+<p>AIの導入を考えるとき、「問い合わせが来たら自動で返信まで終わらせたい」と考えがちです。しかし中小企業の問い合わせは、定型の質問よりも、現場の状況や個別の事情を含むものが多く、全自動にすると誤った回答のリスクが高くなります。最初に目指すのは、次の状態です。</p>
+<table>
+  <tr><th>段階</th><th>状態</th><th>人の作業</th></tr>
+  <tr><td>現状</td><td>問い合わせを担当者が読み、ゼロから返信を書き、記録する</td><td>すべて</td></tr>
+  <tr><td>第1段階</td><td>AIが要約・分類・不足の指摘・返信の下書き・記録の下書きまでを作る</td><td>内容を確認して、修正して送るだけ</td></tr>
+  <tr><td>第2段階</td><td>受付の連絡など、内容が決まっている定型の返信だけ自動送信にする</td><td>定型以外を確認して送る</td></tr>
+</table>
+<p>第1段階でも、担当者がゼロから文章を書く時間はなくなります。問い合わせの多い時期や担当者が不在のときでも、戻ってきてから「確認して送る」だけで済むため、初回返信までの時間を縮めやすくなります。第2段階に進むかどうかは、第1段階でAIの下書きがどれくらい修正なしで使えたかを見てから判断すれば十分です。</p>
+
+<h2>個人情報の扱い — 導入前に確認すること</h2>
+<p>問い合わせには、氏名・会社名・電話番号・メールアドレス・住所などの個人情報が含まれます。個人情報保護委員会は、生成AIサービスを利用する事業者に向けて、個人情報を入力する場合は利用目的の範囲内かを確認することなどの注意を呼びかけています（<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/" target="_blank" rel="noopener">生成AIサービスの利用に関する注意喚起等について</a>）。導入前に、少なくとも次の点を確認してください。</p>
+<ol>
+  <li>問い合わせの内容をAIで処理することが、自社のプライバシーポリシーに書いた利用目的の範囲に含まれるか</li>
+  <li>使うAIサービスが、入力した内容をAIの学習に使うかどうか、使わない設定にできるか</li>
+  <li>データがどこに保存されるか、どれくらいの期間保存されるか</li>
+  <li>社内の誰がAIの処理結果を見られるか（アクセスできる人の範囲）</li>
+  <li>取引先との秘密保持契約で、外部サービスへの入力が制限されている情報がないか</li>
+</ol>
+<p>判断が難しい場合は、個人情報を含む部分をAIに渡す前に伏せる（氏名や電話番号を除いて内容だけを渡す）といった運用から始める方法もあります。</p>
+
+<h2>費用の3つの型</h2>
+<p>問い合わせの一次対応をAIで自動化する費用は、どこまでを仕組みにするかで大きく変わります。具体的な金額は製品・依頼先によって異なるため、ここでは型ごとの特徴を整理します。</p>
+<table>
+  <tr><th>型</th><th>内容</th><th>費用の特徴</th><th>向いているケース</th></tr>
+  <tr><td>既存ツールの設定</td><td>メールソフトの振り分け・定型文・自動返信の機能を使う</td><td>追加費用はほぼかからない。設定の手間のみ</td><td>問い合わせが少なく、まず受付の連絡だけ自動化したい</td></tr>
+  <tr><td>問い合わせ管理ツール</td><td>問い合わせを一元管理するツールに、AIの要約・下書き機能を組み合わせる</td><td>利用人数に応じた月額費用が中心</td><td>複数人で対応していて、対応漏れ・二重対応を防ぎたい</td></tr>
+  <tr><td>自社の業務に合わせた仕組み</td><td>自社の見積項目・過去の対応・社内ルールに合わせて、分類・不足確認・下書き・記録を組み立てる</td><td>初期の設計費用と月額の運用費用。業務の内容と量で変わる</td><td>問い合わせの内容が専門的で、汎用ツールでは下書きの精度が出ない</td></tr>
+</table>
+<p>費用を比べるときは、ツールの料金だけでなく、「導入後に誰が設定を見直すか」まで含めて考えます。AIの下書きの精度は、分類のルールやよくある質問の回答を更新し続けることで上がっていきます。更新する人がいないと、導入時の精度のまま使い続けることになります。</p>
+
+<h2>導入前に準備しておくデータ</h2>
+<p>どの型を選ぶ場合でも、次のデータを用意しておくと、導入がスムーズになり、下書きの精度も上がります。</p>
+<table>
+  <tr><th>データ</th><th>内容</th><th>使い道</th></tr>
+  <tr><td>過去の問い合わせ</td><td>直近3〜6か月分の問い合わせと、実際に送った返信</td><td>分類の例、返信の文体の手本</td></tr>
+  <tr><td>問い合わせの種類の一覧</td><td>見積依頼・納期確認・採用・営業・クレームなど、自社でよくある種類</td><td>分類のルール</td></tr>
+  <tr><td>見積に必要な項目</td><td>数量・仕様・設置場所・希望納期など、見積に最低限必要な情報</td><td>不足情報の確認</td></tr>
+  <tr><td>よくある質問と回答</td><td>営業時間、対応エリア、支払い方法など、答えが決まっている質問</td><td>定型の下書き</td></tr>
+  <tr><td>送ってはいけない表現</td><td>使わない言い回し、約束してはいけない内容</td><td>下書きのチェック</td></tr>
+</table>
+<p>過去の問い合わせを見返すと、「実は問い合わせの半分は同じ質問だった」「見積依頼の多くで設置場所が書かれていない」といった傾向が見えることがあります。そうした傾向は、AIの導入とは別に、問い合わせフォームの項目を見直すきっかけにもなります。</p>
+
+<h2>AIの前に、問い合わせフォームを見直す</h2>
+<p>一次対応の手間の多くは、「最初の問い合わせに必要な情報が書かれていない」ことから生まれます。見積に必要な数量や設置場所が書かれていなければ、確認のメールを送り、返事を待ち、また確認する、という往復が発生します。AIで不足情報の確認メールを素早く作れるようになっても、往復そのものが減るわけではありません。</p>
+<p>そこで、AIの導入とあわせて、問い合わせフォームの項目を見直すことをおすすめします。</p>
+<table>
+  <tr><th>見直しの例</th><th>期待できること</th></tr>
+  <tr><td>問い合わせの種類を選択式にする（見積・納期・採用・その他）</td><td>分類の精度が上がり、担当者への振り分けが早くなる</td></tr>
+  <tr><td>見積に必要な項目を入力欄として用意する</td><td>不足情報の確認の往復が減る</td></tr>
+  <tr><td>写真や図面を添付できるようにする</td><td>現場の状況を文章で説明してもらう手間が減る</td></tr>
+  <tr><td>希望する連絡方法・時間帯を選べるようにする</td><td>電話の折り返しの空振りが減る</td></tr>
+</table>
+<p>ただし、入力項目を増やしすぎると、問い合わせそのものをやめてしまう人が出てきます。必須にするのは本当に必要な項目だけにして、それ以外は任意にするなど、入力の負担とのバランスを取ってください。</p>
+
+<h2>導入後に見る指標</h2>
+<ul>
+  <li>初回返信までの時間（受信から最初の返信まで）</li>
+  <li>AIの下書きを修正なしで送れた割合</li>
+  <li>不足情報の確認で、やり取りが何往復減ったか</li>
+  <li>対応漏れ・二重対応の件数</li>
+</ul>
+<p>導入の効果は、問い合わせの量や内容によって異なります。最初の1〜2か月は、下書きの修正内容を記録し、ルールやよくある質問の回答に反映していくことが、精度を上げる近道です。</p>
+
+<h2>AI社員で問い合わせの一次対応を任せる場合</h2>
+<p><a href="../index.html">AI社員</a>では、採用・発信の自動化に加えて、問い合わせ・見積依頼の一次対応も自動化の対象にしています。フォームやメールで届いた問い合わせを読み取り、要件の整理・不足情報の確認・返信の下書きまでを作り、担当者は内容を確認して送るだけ、という「下書きまでAI、確認と承認は人」の原則で運用します。新しいシステムを入れるのではなく、いま使っているメール・スプレッドシート・チャットの中で動く形にします。データは日本リージョンで保管し、NDAの個別締結にも対応しています。</p>
+<p>問い合わせ対応の自動化の費用は、業務の内容と量によって個別にお見積りしています。<a href="../index.html#contact">無料個別相談</a>では、現在の問い合わせの件数・種類・対応している人数をお聞きし、どこまでをAIに任せられるかを一緒に棚卸しします。既存ツールの設定で十分な場合は、そのようにお伝えします。サービス全体の費用の考え方は<a href="ai-shain-seisaku-guide.html">AI社員の制作を依頼する前に読む完全ガイド</a>でもご確認いただけます。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. AIが作った返信を、そのまま自動で送ってもよいですか。</h3>
+<p>受付の連絡など、内容が完全に決まっている定型の返信であれば自動送信も選択肢になります。金額・納期・可否・謝罪など、判断や約束を含む返信は、人が確認してから送る運用をおすすめします。</p>
+<h3>Q. 問い合わせが月に数十件程度でも、導入する意味はありますか。</h3>
+<p>件数が少なくても、担当者が1人で他の業務と兼務している場合は、返信の遅れや対応漏れを減らす効果が期待できます。まずはメールソフトの既存機能など、費用のかからない方法で効果を確かめるのも一つの方法です。</p>
+<h3>Q. 個人情報をAIに入力しても問題ありませんか。</h3>
+<p>利用目的の範囲内か、入力した情報がAIの学習に使われないか、どこに保存されるかを確認する必要があります。個人情報保護委員会の注意喚起も参考に、自社のプライバシーポリシーと使うサービスの規約を確認してください。</p>
+<h3>Q. 専門的な問い合わせにもAIは対応できますか。</h3>
+<p>過去の問い合わせと回答、社内のルールを整理して渡すことで、要約・分類・不足確認の精度は上げられます。ただし専門的な判断そのものは、人が確認して行う前提で運用してください。</p>
+<h3>Q. 導入までどれくらいかかりますか。</h3>
+<p>既存ツールの設定であれば数日で始められることもあります。自社の業務に合わせた仕組みを作る場合は、過去データの整理とルールづくりに時間がかかるため、準備するデータの量と範囲によって変わります。</p>
+
+<div class="note">本記事は問い合わせ対応へのAI活用に関する一般的な考え方を整理したものであり、特定の効果を保証するものではありません。個人情報の取扱いについては、自社のプライバシーポリシーと利用するサービスの規約をご確認のうえ、必要に応じて専門家にご相談ください。</div>
+<hr>
+    <p>関連記事：<a href="ai-gyomu-jidoka.html">AIで業務自動化｜中小企業の始め方・費用</a> ／ <a href="ai-shain-seisaku-guide.html">AI社員の制作を依頼する前に読む完全ガイド</a> ／ <a href="ai-shacho.html">AI社長とは？できること・できないこと</a></p>
+    <a class="back" href="index.html">← ブログ一覧に戻る</a>
+
+    <div class="share" aria-label="この記事をシェア">
+      <span class="share-label">シェア：</span>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%81%AE%E4%B8%80%E6%AC%A1%E5%AF%BE%E5%BF%9C%E3%82%92AI%E3%81%A7%E8%87%AA%E5%8B%95%E5%8C%96%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB%20%E2%80%94%20%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E3%81%8C%E6%B1%BA%E3%82%81%E3%82%8B%E3%80%8C%E4%BB%BB%E3%81%9B%E3%82%8B%E7%AF%84%E5%9B%B2%E3%80%8D%E3%81%A8%E8%B2%BB%E7%94%A8%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fchusho-saiyo-hasshin.html">X</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fchusho-saiyo-hasshin.html&amp;title=%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%81%AE%E4%B8%80%E6%AC%A1%E5%AF%BE%E5%BF%9C%E3%82%92AI%E3%81%A7%E8%87%AA%E5%8B%95%E5%8C%96%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB%20%E2%80%94%20%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E3%81%8C%E6%B1%BA%E3%82%81%E3%82%8B%E3%80%8C%E4%BB%BB%E3%81%9B%E3%82%8B%E7%AF%84%E5%9B%B2%E3%80%8D%E3%81%A8%E8%B2%BB%E7%94%A8%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9">はてブ</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fchusho-saiyo-hasshin.html">LINE</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fchusho-saiyo-hasshin.html">Facebook</a>
+      <button type="button" class="share-btn share-copy" data-url="https://solederlego8-a11y.github.io/ai-shain-lp/blog/toiawase-ichiji-taiou-ai-jidoka.html">リンクをコピー</button>
+    </div>
+    <script src="share.js"></script>
+
+    <div class="cta-box">
+      <p>「うちは何から直すべきか」を30分で整理します</p>
+      <a class="btn" href="../index.html#contact">無料個別相談を予約する</a>
+    </div>
+  </div>
+</main>
+
+<footer class="b-footer">
+  <div class="b-footer-inner">
+    <div>
+      <p class="b-foot-brand">🪄 AI社員</p>
+      <p style="font-size:13px;color:#9AA6BB;margin:0;max-width:32em">中小企業の採用・発信をチームの戦力化で解決するAIキャラクターサービス。</p>
+    </div>
+    <div class="b-foot-links">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#privacy">プライバシーポリシー</a>
+      <a href="../index.html#tokutei">特定商取引法に基づく表記</a>
+      <a href="../index.html#company">運営会社</a>
+      <a href="index.html">ブログ</a>
+      <a href="editorial-policy.html">編集方針</a>
+    </div>
+  </div>
+  <div class="b-foot-bottom">© 2026 AI社員 All rights reserved.</div>
+</footer>
+
+</body>
+</html>
