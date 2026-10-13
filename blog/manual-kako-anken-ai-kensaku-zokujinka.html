@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- ga4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6023BYFDGZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6023BYFDGZ', { anonymize_ip: true });
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>社内マニュアル・過去案件をAIで検索する前に｜営業秘密と整理の順番｜AI社員ブログ</title>
+<meta name="description" content="社内マニュアルや過去の見積・トラブル対応記録をAIで検索できるようにする前に、資料の整理、読ませる範囲、答えの根拠の確認、営業秘密の観点を整理。外注先に聞く8つの質問と、よくある失敗の防ぎ方も解説します。">
+<meta name="theme-color" content="#0B5FFF">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://solederlego8-a11y.github.io/ai-shain-lp/blog/manual-kako-anken-ai-kensaku-zokujinka.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI社員">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://solederlego8-a11y.github.io/ai-shain-lp/blog/manual-kako-anken-ai-kensaku-zokujinka.html">
+<meta property="og:title" content="社内マニュアル・過去案件をAIで検索する前に｜営業秘密と整理の順番">
+<meta property="og:description" content="社内マニュアルや過去の見積・トラブル対応記録をAIで検索できるようにする前に、資料の整理、読ませる範囲、答えの根拠の確認、営業秘密の観点を整理。外注先に聞く8つの質問と、よくある失敗の防ぎ方も解説します。">
+<meta property="og:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+<!-- ga4-cv -->
+<script>
+if(typeof gtag==='function'){document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('data-cv-tracked'))return;var h=a.href||'';var has=function(s){return h.indexOf(s)>-1;};var asp=has('a8.net')?'a8':(has('rakuten.co.jp')||has('r10.to'))?'rakuten':(has('amazon.co.jp')||has('amzn.'))?'amazon':'';if(asp){gtag('event','affiliate_click',{asp:asp,link_url:h,link_text:(a.innerText||'').trim().slice(0,80),page_path:location.pathname});}else if(has('buy.stripe.com')){gtag('event','begin_checkout',{link_url:h,page_path:location.pathname});}},true);document.addEventListener('submit',function(e){var f=e.target;gtag('event','generate_lead',{form_id:f.id||f.getAttribute('data-subject')||f.action||'',page_path:location.pathname});},true);}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "社内マニュアル・過去案件をAIで検索する前に｜営業秘密と整理の順番", "description": "社内マニュアルや過去の見積・トラブル対応記録をAIで検索できるようにする前に、資料の整理、読ませる範囲、答えの根拠の確認、営業秘密の観点を整理。外注先に聞く8つの質問と、よくある失敗の防ぎ方も解説します。", "datePublished": "2026-10-13", "dateModified": "2026-10-13", "inLanguage": "ja", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://solederlego8-a11y.github.io/ai-shain-lp/blog/manual-kako-anken-ai-kensaku-zokujinka.html"}, "author": {"@type": "Organization", "name": "AI社員 編集部", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/"}, "publisher": {"@type": "Organization", "name": "AI社員", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/", "parentOrganization": {"@type": "Organization", "@id": "https://solederlego8-a11y.github.io/#org", "name": "フォローズ"}}, "image": "https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg"}
+</script>
+<!-- faq-schema -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "資料が紙ばかりです。AIで検索できますか。", "acceptedAnswer": {"@type": "Answer", "text": "スキャンして文字を読み取る手順が必要です。読み取りの精度は資料の状態によって異なるため、実際の資料で試して確認してください。重要な資料から少しずつ進める方法があります。"}}, {"@type": "Question", "name": "自社の資料を、AIの学習に使われたくありません。", "acceptedAnswer": {"@type": "Answer", "text": "サービスの規約と設定で確認します。入力した内容が学習に使われないことを、契約書や規約で確認してください。確認項目は契約前チェックリストにあります。"}}, {"@type": "Question", "name": "AIが間違った答えを返したら、誰の責任ですか。", "acceptedAnswer": {"@type": "Answer", "text": "契約や運用の取り決めによります。社内検索は、答えを使う人が元の資料で確認することを前提にするのが基本です。確認の手順を社内ルールとして決めておいてください。"}}, {"@type": "Question", "name": "資料を整理する時間が取れません。", "acceptedAnswer": {"@type": "Answer", "text": "全部を整理する必要はありません。よく聞かれる質問がある資料から、1種類だけ始めます。整理の一部を外部に依頼することも選択肢です。"}}, {"@type": "Question", "name": "新人教育にも使えますか。", "acceptedAnswer": {"@type": "Answer", "text": "基本の作業手順を読ませておけば、質問の窓口として使えます。ただし、安全に関わる手順や法令に関わる内容は、必ず人が教え、確認することを前提にしてください。"}}]}
+</script>
+</head>
+<body>
+
+<header class="b-header">
+  <div class="b-header-inner">
+    <a class="b-logo" href="../index.html"><span class="mark">🪄</span><span>AI社員</span></a>
+    <nav class="b-nav" aria-label="ナビゲーション">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#company">運営会社</a> <a href="https://solederlego8-a11y.github.io/">運営メディア一覧</a>
+      <a href="index.html">ブログ</a>
+    </nav>
+    <a class="b-cta" href="../index.html#contact">無料個別相談 →</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="index.html">← ブログ一覧</a> ／ 業務自動化 ／ 属人化</p>
+    <h1>社内マニュアル・過去案件をAIで検索する前に｜<br>営業秘密と整理の順番</h1>
+    <p class="lead">AIの答えの質は資料の質で決まります。資料の整理、読ませる範囲の決定、根拠が確認できる検索の順に進めると、属人化の解消につながります。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap article">
+    <p class="byline">AI社員 編集部（運営：フォローズ）</p>
+    <p><time datetime="2026-10-13">更新日：2026年10月13日</time></p>
+<div class="tldr">
+  <p><strong>この記事の結論</strong></p>
+  <ul>
+    <li>社内のマニュアルや過去の見積・トラブル対応の記録を、質問すれば答えが返る形にするAI検索は、<strong>「資料を整理する」「AIに読ませる範囲を決める」「答えの根拠を確認できるようにする」</strong>の順に進めると、属人化の解消につながりやすくなります</li>
+    <li>先にAIを入れるより、資料の置き場所・最新版・更新担当を決めるほうが効果の大半を占めることが多く、ここが整っていないと、AIは古い情報や別案件の情報をもっともらしく返してしまいます</li>
+    <li>過去案件や取引先の情報は、不正競争防止法の「営業秘密」にあたる可能性があります。外部のサービスに読ませる前に、守る情報の範囲と取引先との秘密保持契約を確認します</li>
+  </ul>
+</div>
+
+<div class="judge">
+  <p><strong>30秒で判断：マニュアル・過去案件のAI検索は今やるべきか</strong></p>
+  <ul>
+    <li><strong>「あの件どうやったっけ」を、特定のベテランに聞く場面が週に何度もある</strong> → 効果が出やすい</li>
+    <li><strong>資料が個人のパソコンやLINE、紙に散らばっている</strong> → AIの前に、置き場所の整理が先</li>
+    <li><strong>資料に取引先の機密や個人情報が多く混ざっている</strong> → 読ませる範囲を絞る設計が前提</li>
+    <li><strong>資料が古いまま、更新する人がいない</strong> → 更新担当を決めるまで導入しない</li>
+  </ul>
+</div>
+
+<div class="cta-split">
+  <p>状況別の次の一歩</p>
+  <div class="row"><span>ベテランへの質問を減らしたい。資料の整理から相談したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する</a></div>
+  <div class="row"><span>社内資料の検索の対応範囲を資料で見たい</span><a class="btn sub" href="../materials.html">サービス資料を見る（無料）</a></div>
+</div>
+
+<div class="share-box" style="border:1px solid #cfd8ea;background:#f5f8ff;border-radius:10px;padding:14px 18px;margin:20px 0">
+  <p style="margin:0 0 6px"><strong>要点ボックス（そのまま共有できます）</strong></p>
+  <ul style="margin:0;padding-left:1.2em">
+    <li>順番は「資料の整理 → 読ませる範囲の決定 → 根拠が確認できる検索」</li>
+    <li>古い資料・別案件の情報が混ざると、AIはもっともらしく間違える。更新担当が最重要</li>
+    <li>営業秘密の3要件は、秘密管理性・有用性・非公知性（不正競争防止法）</li>
+    <li>出典: <a href="https://www.meti.go.jp/policy/economy/chizai/chiteki/trade-secret.html" target="_blank" rel="noopener">経済産業省 営業秘密のページ</a></li>
+  </ul>
+</div>
+
+<p>「社内マニュアル AI 検索」「過去案件 検索 AI 属人化」と検索している方は、ベテランの経験や過去のやり取りが、特定の人の頭や個人のフォルダにしかなく、その人が不在だと仕事が止まる、という状況にいるのではないでしょうか。新人の教育にも時間がかかり、同じ質問を何度も受けている、という悩みも多いと思います。</p>
+<p>AIで社内資料を検索できるようにする方法は、すでに多くのサービスで提供されています。ただし、導入しても使われなくなる例や、答えが古い・間違っていて信用されなくなる例があります。この記事では、導入前に整理しておくことを、順番に説明します。特定のサービスの紹介ではなく、法務の個別助言でもありません。</p>
+
+<h2>「AIで検索」の仕組みと、できること・できないこと</h2>
+<p>社内資料を質問で引き出す仕組みは、おおまかに次の流れです。</p>
+<table>
+  <tr><th>段階</th><th>内容</th><th>つまずきやすい点</th></tr>
+  <tr><td>1. 資料を集める</td><td>マニュアル、過去の見積、トラブル対応記録、議事録などを一か所に</td><td>散らばっていて集められない／最新版が分からない</td></tr>
+  <tr><td>2. 読み込ませる</td><td>AIが検索できる形に取り込む</td><td>スキャン画像の文字が読めない／表や図が崩れる</td></tr>
+  <tr><td>3. 質問する</td><td>自然な文章で質問する</td><td>質問の仕方で答えが変わる</td></tr>
+  <tr><td>4. 答えを返す</td><td>関連する資料の該当箇所をもとに回答する</td><td>根拠が示されないと、正しいか確認できない</td></tr>
+  <tr><td>5. 確認して使う</td><td>人が元の資料で確認する</td><td>確認せずに使うと、誤りが業務に流れる</td></tr>
+</table>
+<p>AIは、資料に書かれていないことは基本的に答えられません。また、資料の中に矛盾する記述（古い版と新しい版）があれば、どちらを答えるかは保証できません。つまり、<strong>AIの答えの質は、資料の質で決まります</strong>。これが、導入前に資料を整理する理由です。</p>
+<p>AI社員のサービス紹介ページでも、この分野は「散らばったマニュアル・過去の見積・トラブル対応の記録を、質問すれば答えが返る形に整理する」仕事として説明しています。「整理する」ことが、仕事の中心に入っている点が重要です。</p>
+
+<h2>導入前に進める3つの段階</h2>
+<h3>段階1. 資料の整理 — AIを入れる前の、一番効果が出る作業</h3>
+<p>最初に、どんな資料がどこにあるかを棚卸しします。次の表を埋めてみてください。</p>
+<table>
+  <tr><th>資料の種類</th><th>今の置き場所</th><th>最新版は誰が知っているか</th><th>更新の担当</th></tr>
+  <tr><td>作業マニュアル</td><td>共有フォルダ／紙／個人のPC</td><td>特定の担当者／不明</td><td>決まっている／いない</td></tr>
+  <tr><td>過去の見積・提案書</td><td>メール／共有フォルダ</td><td>営業担当</td><td>決まっている／いない</td></tr>
+  <tr><td>トラブル対応の記録</td><td>メール／LINE／口頭のみ</td><td>対応した人</td><td>決まっている／いない</td></tr>
+  <tr><td>取引先ごとの注意点</td><td>担当者の頭の中</td><td>担当者</td><td>いない</td></tr>
+</table>
+<p>この表を埋める作業だけで、「口頭のみ」「担当者の頭の中」の領域が明らかになります。AIで検索する前に、これを文字に起こすことが、属人化の解消の第一歩です。全部を一度に整理する必要はありません。次の優先順位で、1種類から始めます。</p>
+<ol>
+  <li><strong>よく聞かれる質問がある資料</strong>（問い合わせ対応、見積の条件など）</li>
+  <li><strong>間違えると損失が大きい資料</strong>（安全に関わる手順、法令に関わる手順）</li>
+  <li><strong>新人が最初に覚える資料</strong>（基本の作業手順）</li>
+</ol>
+<p>整理のときの原則は、「1つの内容について、最新版を1つだけ残す」ことです。古い版は、削除せずに「古い版」というフォルダに移し、AIに読ませる対象から外します。</p>
+
+<h3>段階2. 読ませる範囲を決める</h3>
+<p>社内の資料には、AIに読ませてよいものと、読ませるべきでないものが混ざっています。次の基準で分けます。</p>
+<table>
+  <tr><th>区分</th><th>例</th><th>扱い</th></tr>
+  <tr><td>読ませてよい</td><td>一般的な作業手順、社内の用語集、共通のよくある質問</td><td>最初の対象にする</td></tr>
+  <tr><td>条件つきで読ませる</td><td>過去の見積、取引先ごとの注意点</td><td>取引先名や金額を伏せるか、アクセスできる人を限定する</td></tr>
+  <tr><td>読ませない</td><td>個人の評価・給与、取引先から秘密保持を求められている資料、顧客の個人情報</td><td>対象から外す。必要なら別の仕組みを検討</td></tr>
+</table>
+<p>顧客の個人情報を含む資料を外部のAIサービスに読ませる場合は、個人情報保護法上の取扱いの確認が必要です。個人情報保護委員会は、生成AIサービスの利用について注意喚起を公表しています（<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/" target="_blank" rel="noopener">生成AIサービスの利用に関する注意喚起等</a>）。利用目的の範囲内か、入力した情報が回答以外の目的で扱われないかを確認します。</p>
+
+<h3>段階3. 答えの根拠を確認できるようにする</h3>
+<p>社内検索で最も大切なのは、「答えが正しいか」を使う人がその場で確認できることです。次の仕組みがあるかを、導入前に確かめます。</p>
+<ul>
+  <li><strong>答えと一緒に、元の資料の名前と該当箇所が示される</strong>。示されない仕組みは、正しさの確認ができません。</li>
+  <li><strong>資料の更新日が見える</strong>。古い資料からの答えには注意が出るのが望ましい。</li>
+  <li><strong>「資料に書かれていない」と答えられる</strong>。資料にないことを推測して答える仕組みは、危険です。</li>
+  <li><strong>答えに不満があったとき、報告できる</strong>。誤りを集めて、資料の修正につなげます。</li>
+</ul>
+
+<div class="cta-split">
+  <p>営業秘密の観点を読んだら</p>
+  <div class="row"><span>読ませる範囲と更新担当の決め方を相談したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する</a></div>
+  <div class="row"><span>社内で検討するため資料が欲しい</span><a class="btn sub" href="../materials.html">サービス資料を見る</a></div>
+</div>
+
+<h2>過去案件・取引先情報は「営業秘密」の観点も確認する</h2>
+<p>過去の見積、取引先ごとの条件、製造方法などの資料は、不正競争防止法で保護される「営業秘密」にあたる可能性があります。経済産業省のページでは、営業秘密として保護されるための要件として、<strong>秘密管理性・有用性・非公知性</strong>の3つが示されています（<a href="https://www.meti.go.jp/policy/economy/chizai/chiteki/trade-secret.html" target="_blank" rel="noopener">経済産業省 営業秘密のページ</a>）。3つのうち、実務で問題になりやすいのは「秘密として管理されていること」です。</p>
+<p>AIに読ませる際に、この観点で注意する点は次のとおりです。</p>
+<ul>
+  <li><strong>アクセスできる人を限定する</strong>。誰でも全ての過去案件を検索できる状態にすると、秘密として管理していると言いにくくなる可能性があります。部署や役職で見られる範囲を分けます。</li>
+  <li><strong>資料に「秘密」の表示をする</strong>。秘密の対象が従業員に分かるようにしておくことが、管理の基本です。</li>
+  <li><strong>外部のサービスに預ける場合の契約</strong>。預け先の秘密保持、再委託、削除の扱いを確認します。確認項目は<a href="ai-gyomu-itaku-keiyaku-mae-kakunin.html">AIの業務代行を発注する契約前チェックリスト</a>にまとめています。</li>
+  <li><strong>取引先との秘密保持契約</strong>。取引先から預かった情報は、取引先の同意なく第三者に渡せない場合があります。</li>
+</ul>
+<p>営業秘密の保護の要件と、自社の資料がそれに該当するかの判断は、専門的な内容です。判断が難しい場合は、弁護士や公的な相談窓口（経済産業省のページに案内があります）にご相談ください。</p>
+
+<h2>効果の測り方 — 「使われているか」と「答えが合っているか」</h2>
+<p>導入後の評価は、次の2つの観点で行います。</p>
+<table>
+  <tr><th>観点</th><th>測り方</th><th>見直しの目安</th></tr>
+  <tr><td>使われているか</td><td>週に何回、何人が検索したか</td><td>使われないなら、質問しにくいのか、答えが役に立たないのか原因を聞く</td></tr>
+  <tr><td>答えが合っているか</td><td>よくある質問10件で、正解を人が確認する</td><td>誤りの多い分野は、資料の古さや矛盾を疑う</td></tr>
+  <tr><td>ベテランへの質問が減ったか</td><td>質問を受けた回数を記録する</td><td>減らないなら、検索の使い方の周知が必要</td></tr>
+  <tr><td>新人の立ち上がりが早くなったか</td><td>独り立ちまでの期間を比べる</td><td>他の要因（仕事の量など）も考慮する</td></tr>
+</table>
+<p>最初の1か月は、よくある質問10件程度をテストとして使い、人が正解を確認すると、精度の傾向が分かります。誤りの多いところを見れば、直すべき資料も見えてきます。</p>
+
+<h2>外注先・ツールに聞く質問 — 社内検索に特化した8つ</h2>
+<ol>
+  <li>答えと一緒に、元の資料名と該当箇所が示されますか。</li>
+  <li>資料にない内容を聞かれたとき、「分からない」と答えますか。それとも推測で答えますか。</li>
+  <li>資料の古い版と新しい版が混ざっている場合、どう扱いますか。</li>
+  <li>部署や役職で、見られる資料を分けられますか。</li>
+  <li>読み込ませた資料は、どこに保存されますか。AIの学習に使われませんか。</li>
+  <li>スキャンした紙の資料や、表・図の多い資料は、どの程度読み取れますか。</li>
+  <li>資料を更新したとき、反映までの手順と時間はどのくらいですか。</li>
+  <li>契約を終えたとき、読み込んだ資料と作った設定は、どのように返却・削除されますか。</li>
+</ol>
+<p>依頼先のタイプ（外注・SaaS・内製）の選び方は<a href="ai-gyomu-itaku-erabikata-hub.html">AI業務自動化の依頼先の判断フロー</a>で整理しています。見積書の過去データの活用は<a href="mitsumori-sho-ai-jidoka-sakusei-mae.html">見積書のAI自動作成の記事</a>、少人数の会社の費用の考え方は<a href="shoki-5nin-ika-ai-shain-hiyo.html">従業員5人以下のAI導入の記事</a>も参考になります。</p>
+
+<h2>よくある失敗と、その防ぎ方</h2>
+<table>
+  <tr><th>失敗</th><th>原因</th><th>防ぎ方</th></tr>
+  <tr><td>古い手順を答えられて、現場が混乱した</td><td>古い版が読み込み対象に残っていた</td><td>最新版を1つだけ残し、古い版は対象から外す</td></tr>
+  <tr><td>他の取引先の条件が答えに混ざった</td><td>案件ごとの資料が区別されていない</td><td>取引先ごとに資料を分け、質問に取引先名を含める</td></tr>
+  <tr><td>誰も使わなくなった</td><td>使い方が周知されていない／答えが役に立たない</td><td>最初は質問の例を配る。よくある質問から対象にする</td></tr>
+  <tr><td>機密の資料が、全員に見える状態になった</td><td>アクセスの範囲を決めていなかった</td><td>最初に読ませる範囲とアクセスできる人を決める</td></tr>
+  <tr><td>契約をやめたら、整理した資料が使えなくなった</td><td>整理の成果が外注先の管理下にあった</td><td>整理した資料は自社の場所に置く</td></tr>
+</table>
+<p>最後の失敗は、特に重要です。資料の整理は、AIとは別に、会社の財産になる作業です。整理した成果が自社に残る形で進めると、AIのサービスを変えても、投資が無駄になりません。</p>
+
+<h2>AI社員に相談できること</h2>
+<p>AI社員では、散らばったマニュアル・過去の見積・トラブル対応の記録を、質問すれば答えが返る形に整理する相談を受け付けています。費用は資料の量と対象によって個別のお見積りです。無料個別相談では、資料の棚卸し、読ませる範囲の決め方、更新担当の決め方から、一緒に整理できます。「今はまだ資料の整理から」という段階でも、ご相談いただけます。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. 資料が紙ばかりです。AIで検索できますか。</h3>
+<p>スキャンして文字を読み取る手順が必要です。読み取りの精度は資料の状態によって異なるため、実際の資料で試して確認してください。重要な資料から少しずつ進める方法があります。</p>
+<h3>Q. 自社の資料を、AIの学習に使われたくありません。</h3>
+<p>サービスの規約と設定で確認します。入力した内容が学習に使われないことを、契約書や規約で確認してください。確認項目は<a href="ai-gyomu-itaku-keiyaku-mae-kakunin.html">契約前チェックリスト</a>にあります。</p>
+<h3>Q. AIが間違った答えを返したら、誰の責任ですか。</h3>
+<p>契約や運用の取り決めによります。社内検索は、答えを使う人が元の資料で確認することを前提にするのが基本です。確認の手順を社内ルールとして決めておいてください。</p>
+<h3>Q. 資料を整理する時間が取れません。</h3>
+<p>全部を整理する必要はありません。よく聞かれる質問がある資料から、1種類だけ始めます。整理の一部を外部に依頼することも選択肢です。</p>
+<h3>Q. 新人教育にも使えますか。</h3>
+<p>基本の作業手順を読ませておけば、質問の窓口として使えます。ただし、安全に関わる手順や法令に関わる内容は、必ず人が教え、確認することを前提にしてください。</p>
+
+<div class="note">本記事は社内資料のAI検索に関する一般的な確認事項の整理であり、法務の個別の助言ではありません。営業秘密や個人情報の取扱いの判断は、経済産業省・個人情報保護委員会の資料や弁護士などの専門家にご確認ください。情報は2026年10月13日時点のものです。</div>
+
+<hr>
+    <p>次に読むなら：<a href="ai-gyomu-itaku-erabikata-hub.html">AI業務自動化の依頼先の判断フロー</a> ／ <a href="ai-gyomu-itaku-keiyaku-mae-kakunin.html">契約前チェックリスト</a> ／ <a href="kensetsu-nippo-ai-jidoka.html">建設業の日報をAIで自動作成する前に</a></p>
+    <a class="back" href="index.html">← ブログ一覧に戻る</a>
+
+    <div class="share" aria-label="この記事をシェア">
+      <span class="share-label">シェア：</span>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=%E7%A4%BE%E5%86%85%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%BB%E9%81%8E%E5%8E%BB%E6%A1%88%E4%BB%B6%E3%82%92AI%E3%81%A7%E6%A4%9C%E7%B4%A2%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB%EF%BD%9C%E5%96%B6%E6%A5%AD%E7%A7%98%E5%AF%86%E3%81%A8%E6%95%B4%E7%90%86%E3%81%AE%E9%A0%86%E7%95%AA&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fmanual-kako-anken-ai-kensaku-zokujinka.html">X</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fmanual-kako-anken-ai-kensaku-zokujinka.html&amp;title=%E7%A4%BE%E5%86%85%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%BB%E9%81%8E%E5%8E%BB%E6%A1%88%E4%BB%B6%E3%82%92AI%E3%81%A7%E6%A4%9C%E7%B4%A2%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB%EF%BD%9C%E5%96%B6%E6%A5%AD%E7%A7%98%E5%AF%86%E3%81%A8%E6%95%B4%E7%90%86%E3%81%AE%E9%A0%86%E7%95%AA">はてブ</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fmanual-kako-anken-ai-kensaku-zokujinka.html">LINE</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fmanual-kako-anken-ai-kensaku-zokujinka.html">Facebook</a>
+      <button type="button" class="share-btn share-copy" data-url="https://solederlego8-a11y.github.io/ai-shain-lp/blog/manual-kako-anken-ai-kensaku-zokujinka.html">リンクをコピー</button>
+    </div>
+    <script src="share.js"></script>
+
+    <div class="cta-split">
+  <p>ここまで読んだ方へ</p>
+  <div class="row"><span>資料の棚卸しの段階から相談したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する（30秒で入力）</a></div>
+  <div class="row"><span>料金とプランの全体を先に確認したい</span><a class="btn sub" href="../materials.html">サービス資料を見る</a></div>
+</div>
+  </div>
+</main>
+
+<footer class="b-footer">
+  <div class="b-footer-inner">
+    <div>
+      <p class="b-foot-brand">🪄 AI社員</p>
+      <p style="font-size:13px;color:#9AA6BB;margin:0;max-width:32em">中小企業の採用・発信をチームの戦力化で解決するAIキャラクターサービス。</p>
+    </div>
+    <div class="b-foot-links">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#privacy">プライバシーポリシー</a>
+      <a href="../index.html#tokutei">特定商取引法に基づく表記</a>
+      <a href="../index.html#company">運営会社</a>
+      <a href="index.html">ブログ</a>
+      <a href="editorial-policy.html">編集方針</a>
+    </div>
+  </div>
+  <div class="b-foot-bottom">© 2026 AI社員 All rights reserved.</div>
+</footer>
+
+</body>
+</html>

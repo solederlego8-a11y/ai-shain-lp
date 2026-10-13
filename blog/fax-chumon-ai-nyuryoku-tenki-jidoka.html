@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- ga4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6023BYFDGZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6023BYFDGZ', { anonymize_ip: true });
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAX注文のAI入力・転記を外注する前に｜電子取引の保存と確認の線引き｜AI社員ブログ</title>
+<meta name="description" content="FAX・メール・紙の注文をAIで読み取り転記する前に、入力元の数え方、読み取りの確認方法、入力先の連携、電子取引としての保存、書式のばらつきへの対応の5つを整理。外注先に聞く8つの質問付きです。">
+<meta name="theme-color" content="#0B5FFF">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://solederlego8-a11y.github.io/ai-shain-lp/blog/fax-chumon-ai-nyuryoku-tenki-jidoka.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI社員">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://solederlego8-a11y.github.io/ai-shain-lp/blog/fax-chumon-ai-nyuryoku-tenki-jidoka.html">
+<meta property="og:title" content="FAX注文のAI入力・転記を外注する前に｜電子取引の保存と確認の線引き">
+<meta property="og:description" content="FAX・メール・紙の注文をAIで読み取り転記する前に、入力元の数え方、読み取りの確認方法、入力先の連携、電子取引としての保存、書式のばらつきへの対応の5つを整理。外注先に聞く8つの質問付きです。">
+<meta property="og:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+<!-- ga4-cv -->
+<script>
+if(typeof gtag==='function'){document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('data-cv-tracked'))return;var h=a.href||'';var has=function(s){return h.indexOf(s)>-1;};var asp=has('a8.net')?'a8':(has('rakuten.co.jp')||has('r10.to'))?'rakuten':(has('amazon.co.jp')||has('amzn.'))?'amazon':'';if(asp){gtag('event','affiliate_click',{asp:asp,link_url:h,link_text:(a.innerText||'').trim().slice(0,80),page_path:location.pathname});}else if(has('buy.stripe.com')){gtag('event','begin_checkout',{link_url:h,page_path:location.pathname});}},true);document.addEventListener('submit',function(e){var f=e.target;gtag('event','generate_lead',{form_id:f.id||f.getAttribute('data-subject')||f.action||'',page_path:location.pathname});},true);}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "FAX注文のAI入力・転記を外注する前に｜電子取引の保存と確認の線引き", "description": "FAX・メール・紙の注文をAIで読み取り転記する前に、入力元の数え方、読み取りの確認方法、入力先の連携、電子取引としての保存、書式のばらつきへの対応の5つを整理。外注先に聞く8つの質問付きです。", "datePublished": "2026-10-13", "dateModified": "2026-10-13", "inLanguage": "ja", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://solederlego8-a11y.github.io/ai-shain-lp/blog/fax-chumon-ai-nyuryoku-tenki-jidoka.html"}, "author": {"@type": "Organization", "name": "AI社員 編集部", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/"}, "publisher": {"@type": "Organization", "name": "AI社員", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/", "parentOrganization": {"@type": "Organization", "@id": "https://solederlego8-a11y.github.io/#org", "name": "フォローズ"}}, "image": "https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg"}
+</script>
+<!-- faq-schema -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "手書きのFAXでも読み取れますか。", "acceptedAnswer": {"@type": "Answer", "text": "読み取れる場合もありますが、誤りが出やすい領域です。読み取り結果を人が確認する前提で、元の画像と並べて見られる仕組みにしてください。精度は、実際の自社の注文書で試して確認します。"}}, {"@type": "Question", "name": "紙のFAXしかありません。", "acceptedAnswer": {"@type": "Answer", "text": "スキャンして取り込む手順が増えます。複合機のデータ受信への切り替えは、保存の面でも整理しやすくなる場合がありますが、国税庁の資料で扱いを確認してください。"}}, {"@type": "Question", "name": "受注システムに直接つなげられますか。", "acceptedAnswer": {"@type": "Answer", "text": "システムによって、CSV取り込みやAPI連携の可否が異なります。最初はスプレッドシートの確認一覧から始め、運用が安定してから連携を検討する方法があります。"}}, {"@type": "Question", "name": "取引先に、注文書の書式を変えてもらうべきですか。", "acceptedAnswer": {"@type": "Answer", "text": "取引先に負担をかける変更は、慎重に進めてください。まず自社側の読み取りと照合で対応し、それでも難しい場合に相談する順番が現実的です。"}}, {"@type": "Question", "name": "導入の効果は、どのくらいで分かりますか。", "acceptedAnswer": {"@type": "Answer", "text": "導入前に計った入力時間とミスの件数を、1か月運用した時点で比べます。確認の時間も含めて短くなっているかで判断してください。効果は業種や運用により異なり、保証されるものではありません。"}}]}
+</script>
+</head>
+<body>
+
+<header class="b-header">
+  <div class="b-header-inner">
+    <a class="b-logo" href="../index.html"><span class="mark">🪄</span><span>AI社員</span></a>
+    <nav class="b-nav" aria-label="ナビゲーション">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#company">運営会社</a> <a href="https://solederlego8-a11y.github.io/">運営メディア一覧</a>
+      <a href="index.html">ブログ</a>
+    </nav>
+    <a class="b-cta" href="../index.html#contact">無料個別相談 →</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="index.html">← ブログ一覧</a> ／ 業務自動化 ／ 受発注</p>
+    <h1>FAX注文のAI入力・転記を外注する前に｜<br>電子取引の保存と確認の線引き</h1>
+    <p class="lead">注文の転記は、読み取りと入力はAI、注文内容の確定は人に分けると、誤入力による出荷ミスを防ぎやすくなります。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap article">
+    <p class="byline">AI社員 編集部（運営：フォローズ）</p>
+    <p><time datetime="2026-10-13">更新日：2026年10月13日</time></p>
+<div class="tldr">
+  <p><strong>この記事の結論</strong></p>
+  <ul>
+    <li>FAXやメール、紙で届く注文を、AIで読み取ってスプレッドシートや既存システムに入力できる形に変える方法は、<strong>「読み取り」と「転記」はAI、「注文内容の確定」は人</strong>に分けると、誤入力による出荷ミスを防ぎやすくなります</li>
+    <li>外注前に決めたいのは、①入力元（FAX・メール・紙）の種類と量、②読み取りの確認方法、③入力先と連携の範囲、④取引データの保存、⑤取引先ごとの書式のばらつきへの対応、の5つです</li>
+    <li>ペーパーレス化したFAX機能のある複合機などで受け取った注文は、電子帳簿保存法の「電子取引」にあたることがあります。保存の扱いは導入前に国税庁の資料で確認します</li>
+  </ul>
+</div>
+
+<div class="judge">
+  <p><strong>30秒で判断：注文の転記をAIに任せられるか</strong></p>
+  <ul>
+    <li><strong>取引先の書式がある程度そろっている（上位の数社で注文の大半）</strong> → 読み取りの精度を確認しやすく、始めやすい</li>
+    <li><strong>書式が取引先ごとにばらばらで、手書きが多い</strong> → 読み取りの確認に時間がかかる。件数の多い取引先から1社ずつ</li>
+    <li><strong>月末にまとめて入力していて、入力ミスの修正が負担</strong> → 効果が出やすい</li>
+    <li><strong>注文の確認（在庫・納期の回答）まで自動化したい</strong> → 範囲が広い。まず転記だけに絞る</li>
+  </ul>
+</div>
+
+<div class="cta-split">
+  <p>状況別の次の一歩</p>
+  <div class="row"><span>月末にまとめて入力していて、転記の自動化を相談したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する</a></div>
+  <div class="row"><span>転記の対応範囲や料金を先に資料で見たい</span><a class="btn sub" href="../materials.html">サービス資料を見る（無料）</a></div>
+</div>
+
+<div class="share-box" style="border:1px solid #cfd8ea;background:#f5f8ff;border-radius:10px;padding:14px 18px;margin:20px 0">
+  <p style="margin:0 0 6px"><strong>要点ボックス（そのまま共有できます）</strong></p>
+  <ul style="margin:0;padding-left:1.2em">
+    <li>注文の転記は「読み取りと入力はAI、内容の確定は人」</li>
+    <li>外注前の5点：入力元／確認方法／入力先と連携／取引データの保存／書式のばらつき</li>
+    <li>ペーパーレスFAX機能付き複合機での取引は電子取引にあたることがある（国税庁の電子取引の一問一答で確認）</li>
+    <li>出典: <a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/index.htm" target="_blank" rel="noopener">国税庁 電子帳簿保存法関係</a></li>
+  </ul>
+</div>
+
+<p>「FAX 注文書 AI 自動入力」「受注 転記 自動化」と検索している方は、日々届くFAXやメールの注文を、手で受注システムや表計算ソフトに入力していて、入力の手間や転記ミスに悩んでいると思います。月末にまとめて入力する運用では、ミスに気づくのが遅れ、出荷や請求の後で見つかることもあります。</p>
+<p>この記事は、注文の読み取りと転記をAIに任せたい中小企業が、外注先やツールに依頼する前に整理しておく内容をまとめたものです。特定のサービスの紹介ではありません。税務や法務の個別の助言でもなく、一般的な確認事項です。</p>
+
+<h2>転記作業の流れと、AIに任せられる部分</h2>
+<p>注文の受け取りから入力までを分解すると、次のようになります。AIが得意なのは「読む」「並べ替える」部分で、不得意なのは「注文として成り立っているかを判断する」部分です。</p>
+<table>
+  <tr><th>工程</th><th>作業</th><th>AIとの相性</th><th>人が持つ判断</th></tr>
+  <tr><td>1. 受け取り</td><td>FAX・メール・紙・電話メモを集める</td><td>メールは取り込みやすい。紙は読み取りの前処理が必要</td><td>どの経路を正式な注文とするか</td></tr>
+  <tr><td>2. 読み取り</td><td>取引先名・品番・数量・納期・届け先を読む</td><td>得意。ただし手書きや不鮮明な画像は誤りが出る</td><td>読み取り結果の確認</td></tr>
+  <tr><td>3. 照合</td><td>品番や取引先を自社のマスタと突き合わせる</td><td>マスタが整っていれば得意</td><td>マスタにない品番の扱い</td></tr>
+  <tr><td>4. 入力データへの変換</td><td>システムの取り込み形式に整える</td><td>得意</td><td>形式の仕様の決定</td></tr>
+  <tr><td>5. 入力・登録</td><td>受注システムや表計算に入れる</td><td>連携があれば可能</td><td>登録してよい条件の判断</td></tr>
+  <tr><td>6. 注文の確定</td><td>在庫・納期・価格を確認して承諾する</td><td>任せない</td><td>承諾は人</td></tr>
+</table>
+<p>サービス紹介ページでも、受発注の転記は「メール・FAX・紙で届く注文や納品情報を読み取り、スプレッドシートや既存システムへの入力データに変換する」仕事として説明しています。注文を承諾する工程は含まれていません。ここを人が持つことが、安全に使う前提です。</p>
+
+<h2>外注・導入の前に決める「5つの線引き」</h2>
+<h3>線引き1. 入力元の種類と量を数える</h3>
+<p>最初に、直近1か月の注文を、経路ごとに数えます。数えるだけで、どこから自動化するかが見えてきます。</p>
+<table>
+  <tr><th>入力元</th><th>確認すること</th><th>難易度の目安</th></tr>
+  <tr><td>メール本文</td><td>文章の書き方が取引先ごとに決まっているか</td><td>低い</td></tr>
+  <tr><td>メール添付（PDF・Excel）</td><td>書式が取引先ごとに固定されているか</td><td>低〜中</td></tr>
+  <tr><td>FAX（複合機でデータ受信）</td><td>解像度、傾き、手書きの有無</td><td>中</td></tr>
+  <tr><td>FAX（紙で受信）</td><td>スキャンの手順を足す必要がある</td><td>中〜高</td></tr>
+  <tr><td>電話・口頭</td><td>メモの書式を決めれば入力元にできる</td><td>高（先に運用を整える）</td></tr>
+</table>
+<p>件数が多くて書式が固定されている取引先から始めると、読み取りの精度の確認がしやすくなります。全取引先を一度に対象にしないことが、立ち上げを安定させるコツです。</p>
+
+<h3>線引き2. 読み取り結果をどう確認するか</h3>
+<p>AIによる読み取りは、完全ではありません。特にFAXの手書き数字は、1と7、0と6などの誤りが起きやすい部分です。確認の方法を、最初に決めておきます。</p>
+<ul>
+  <li><strong>元の画像と読み取り結果を並べて見られるか</strong>。確認者が元の注文書を探し回る状態では、確認が形だけになります。</li>
+  <li><strong>自信の低い項目に印がつくか</strong>。読み取りが怪しい箇所を目立たせると、確認が速くなります。</li>
+  <li><strong>必須項目の抜けを検出するか</strong>。届け先や納期が空欄のまま登録されない仕組みにします。</li>
+  <li><strong>数量の桁の異常を警告するか</strong>。過去の注文と比べて極端な数量は、人に確認を回します。</li>
+  <li><strong>確認の責任者</strong>。誰が、いつまでに確認するのかを決めておきます。</li>
+</ul>
+<p>確認が必要な件数が多すぎると、運用が回らなくなります。外注先に、「確認が必要になる割合を、どう下げていくか」を質問してみてください。</p>
+
+<h3>線引き3. 入力先と連携の範囲</h3>
+<p>読み取った内容をどこに入れるかで、費用と手間が大きく変わります。</p>
+<table>
+  <tr><th>入力先</th><th>方法</th><th>確認すること</th></tr>
+  <tr><td>スプレッドシート（Excel・Googleスプレッドシート）</td><td>行を追加する</td><td>列の並びを変えたときに壊れないか</td></tr>
+  <tr><td>受注システム・販売管理ソフト</td><td>CSV取り込み、またはAPI連携</td><td>取り込み形式、連携の可否、費用</td></tr>
+  <tr><td>会計ソフト</td><td>仕訳や請求データとして連携</td><td>どの段階で連携するか</td></tr>
+</table>
+<p>最初のうちは、スプレッドシートに「確認待ちの一覧」として入れ、人が確認したものだけを既存システムに取り込む形が安全です。AIが直接、基幹の受注システムに登録する設計は、誤りが業務に直接流れ込むため、運用が安定してからの検討で遅くありません。</p>
+
+<h3>線引き4. 取引データの保存</h3>
+<p>注文書や発注書は、取引関係書類として保存のルールが関わります。国税庁の電子帳簿保存法の資料では、電子取引の例として、EDI取引、インターネット等による取引、電子メールによる取引に加えて、ペーパーレス化されたFAX機能を持つ複合機を利用した取引が挙げられています。つまり、FAXでも、データとして受け取っている場合は、電子取引として保存の要件が関わる可能性があります。</p>
+<p>導入前に、次を確認してください。</p>
+<ul>
+  <li>自社の受信方法（紙で受信か、複合機でデータ受信か）</li>
+  <li>受け取ったデータを、どの場所に、どの名前で保存しているか</li>
+  <li>AIのツールが読み取り用に画像を取り込む場合、元の画像の保存先はどこか（ツール側にだけ残らないようにする）</li>
+</ul>
+<p>具体的な保存の要件は、国税庁の<a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/index.htm" target="_blank" rel="noopener">電子帳簿保存法関係のページ</a>で最新の内容を確認し、判断が難しい場合は税理士などの専門家にご相談ください。</p>
+
+<h3>線引き5. 取引先ごとの書式のばらつきへの対応</h3>
+<p>書式がばらばらでも、AIは文脈から読み取れる場合があります。ただし、ばらつきが大きいほど、確認の負担は増えます。次の方法で、ばらつきを減らせます。</p>
+<ul>
+  <li><strong>取引先へ注文書の書式を依頼する</strong>。取引先に負担をかけないよう、自社の都合の押し付けにならない範囲で検討します。</li>
+  <li><strong>品番マスタを整備する</strong>。取引先ごとの品番の呼び方（通称や旧品番）を自社の品番に対応づけておくと、照合の精度が上がります。</li>
+  <li><strong>例外の扱いを決める</strong>。読み取れない注文は、人が入力する流れに戻す。自動化は100%を目指さず、8割をAI、2割を人と割り切ります。</li>
+</ul>
+
+<div class="cta-split">
+  <p>5つの線引きを読んだら</p>
+  <div class="row"><span>最初に対象にする取引先の選び方から相談したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する</a></div>
+  <div class="row"><span>社内で共有するために資料が欲しい</span><a class="btn sub" href="../materials.html">サービス資料を見る</a></div>
+</div>
+
+<h2>導入前の「入力ミスの棚卸し」</h2>
+<p>効果を測る基準がないと、導入が成功したのかが分かりません。導入前の1か月で、次を記録しておきます。</p>
+<table>
+  <tr><th>記録する項目</th><th>方法</th><th>導入後の比較</th></tr>
+  <tr><td>1件あたりの入力時間</td><td>数件分を実際に計る</td><td>確認の時間を含めて比べる</td></tr>
+  <tr><td>入力ミスの件数と種類</td><td>修正が発生した注文を記録</td><td>種類別（数量・品番・納期・届け先）に減ったか</td></tr>
+  <tr><td>入力が遅れる曜日・時期</td><td>月末や繁忙期の状況</td><td>遅れが減ったか</td></tr>
+  <tr><td>特定の担当者への依存度</td><td>その人が休むと止まるか</td><td>他の人でも回るようになったか</td></tr>
+</table>
+<p>導入後は、「入力時間が減ったか」だけでなく、「確認の時間を足しても減ったか」で判断します。読み取りの確認に時間がかかりすぎて、全体の時間が減らない場合は、対象を絞り直すか、見直しの時期です。</p>
+
+<h2>外注先・ツールに聞く質問 — 転記に特化した8つ</h2>
+<ol>
+  <li>手書きのFAXは、どの程度まで読み取れますか。読み取れなかったとき、どう表示されますか。</li>
+  <li>読み取り結果と元の画像を、並べて確認できますか。</li>
+  <li>必須項目が空欄のまま登録される事故を、どう防ぎますか。</li>
+  <li>当社の品番マスタと、どのように照合しますか。マスタにない品番はどうなりますか。</li>
+  <li>入力先は、スプレッドシートと既存システムのどちらから始められますか。</li>
+  <li>取り込んだ元の画像やデータは、どこに保存され、契約終了時にどうなりますか。</li>
+  <li>取引先が増えたり、書式が変わったりしたとき、設定の修正は誰が、どの費用で行いますか。</li>
+  <li>誤入力が出荷や請求の後に見つかったとき、誰が、どのように連絡と修正を行いますか。</li>
+</ol>
+<p>契約前の確認項目の全体は<a href="ai-gyomu-itaku-keiyaku-mae-kakunin.html">AIの業務代行を発注する契約前チェックリスト</a>に、依頼先のタイプ（外注・SaaS・内製）の選び方は<a href="ai-gyomu-itaku-erabikata-hub.html">AI業務自動化の依頼先の判断フロー</a>にまとめています。取引先ごとに送り先や見積を管理している会社は、<a href="mitsumori-sho-ai-jidoka-sakusei-mae.html">見積書のAI自動作成の記事</a>も参考になります。</p>
+
+<h2>よくある失敗と、その防ぎ方</h2>
+<table>
+  <tr><th>失敗</th><th>原因</th><th>防ぎ方</th></tr>
+  <tr><td>数量の桁を読み違えたまま登録された</td><td>確認の工程がなかった</td><td>過去の数量との乖離を警告し、確認に回す</td></tr>
+  <tr><td>取引先の通称の品番が照合できない</td><td>品番マスタに通称が入っていない</td><td>対応表を整備し、未登録は人が確認する</td></tr>
+  <tr><td>確認の件数が多すぎて運用が止まった</td><td>全取引先を一度に対象にした</td><td>件数の多い取引先から順に広げる</td></tr>
+  <tr><td>元の注文書が見つからない</td><td>保存の場所と名前が決まっていない</td><td>保存の規則を決め、AIの読み取りと切り離す</td></tr>
+  <tr><td>契約をやめたら設定が使えなくなった</td><td>対応表や設定が外注先の管理下だった</td><td>マスタと対応表は自社で持つ</td></tr>
+</table>
+
+<h2>AI社員に相談できること</h2>
+<p>AI社員では、メール・FAX・紙で届く注文や納品情報を読み取り、スプレッドシートや既存システムへの入力データに変換する相談を受け付けています。「下書きまでAI、確認と承認は人」の原則で、いま使っているメール・スプレッドシート・チャットの中で動く形を基本にしています。費用は業務の内容と量により個別のお見積りです。無料個別相談では、入力元の棚卸しと、最初に対象にする取引先の選び方から整理できます。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. 手書きのFAXでも読み取れますか。</h3>
+<p>読み取れる場合もありますが、誤りが出やすい領域です。読み取り結果を人が確認する前提で、元の画像と並べて見られる仕組みにしてください。精度は、実際の自社の注文書で試して確認します。</p>
+<h3>Q. 紙のFAXしかありません。</h3>
+<p>スキャンして取り込む手順が増えます。複合機のデータ受信への切り替えは、保存の面でも整理しやすくなる場合がありますが、国税庁の資料で扱いを確認してください。</p>
+<h3>Q. 受注システムに直接つなげられますか。</h3>
+<p>システムによって、CSV取り込みやAPI連携の可否が異なります。最初はスプレッドシートの確認一覧から始め、運用が安定してから連携を検討する方法があります。</p>
+<h3>Q. 取引先に、注文書の書式を変えてもらうべきですか。</h3>
+<p>取引先に負担をかける変更は、慎重に進めてください。まず自社側の読み取りと照合で対応し、それでも難しい場合に相談する順番が現実的です。</p>
+<h3>Q. 導入の効果は、どのくらいで分かりますか。</h3>
+<p>導入前に計った入力時間とミスの件数を、1か月運用した時点で比べます。確認の時間も含めて短くなっているかで判断してください。効果は業種や運用により異なり、保証されるものではありません。</p>
+
+<div class="note">本記事は受発注データの転記の自動化に関する一般的な確認事項の整理であり、税務・法務の個別の助言ではありません。制度は2026年10月13日時点の情報に基づいており、変更されることがあります。電子取引の保存の判断は、国税庁の資料や税理士などの専門家にご確認ください。</div>
+
+<hr>
+    <p>次に読むなら：<a href="ai-gyomu-itaku-erabikata-hub.html">AI業務自動化の依頼先の判断フロー</a> ／ <a href="ai-gyomu-itaku-keiyaku-mae-kakunin.html">契約前チェックリスト</a> ／ <a href="mitsumori-sho-ai-jidoka-sakusei-mae.html">見積書のAI自動作成</a></p>
+    <a class="back" href="index.html">← ブログ一覧に戻る</a>
+
+    <div class="share" aria-label="この記事をシェア">
+      <span class="share-label">シェア：</span>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=FAX%E6%B3%A8%E6%96%87%E3%81%AEAI%E5%85%A5%E5%8A%9B%E3%83%BB%E8%BB%A2%E8%A8%98%E3%82%92%E5%A4%96%E6%B3%A8%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB%EF%BD%9C%E9%9B%BB%E5%AD%90%E5%8F%96%E5%BC%95%E3%81%AE%E4%BF%9D%E5%AD%98%E3%81%A8%E7%A2%BA%E8%AA%8D%E3%81%AE%E7%B7%9A%E5%BC%95%E3%81%8D&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Ffax-chumon-ai-nyuryoku-tenki-jidoka.html">X</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Ffax-chumon-ai-nyuryoku-tenki-jidoka.html&amp;title=FAX%E6%B3%A8%E6%96%87%E3%81%AEAI%E5%85%A5%E5%8A%9B%E3%83%BB%E8%BB%A2%E8%A8%98%E3%82%92%E5%A4%96%E6%B3%A8%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB%EF%BD%9C%E9%9B%BB%E5%AD%90%E5%8F%96%E5%BC%95%E3%81%AE%E4%BF%9D%E5%AD%98%E3%81%A8%E7%A2%BA%E8%AA%8D%E3%81%AE%E7%B7%9A%E5%BC%95%E3%81%8D">はてブ</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Ffax-chumon-ai-nyuryoku-tenki-jidoka.html">LINE</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Ffax-chumon-ai-nyuryoku-tenki-jidoka.html">Facebook</a>
+      <button type="button" class="share-btn share-copy" data-url="https://solederlego8-a11y.github.io/ai-shain-lp/blog/fax-chumon-ai-nyuryoku-tenki-jidoka.html">リンクをコピー</button>
+    </div>
+    <script src="share.js"></script>
+
+    <div class="cta-split">
+  <p>ここまで読んだ方へ</p>
+  <div class="row"><span>入力元の棚卸しから一緒に整理したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する（30秒で入力）</a></div>
+  <div class="row"><span>まず料金とプランの全体を見たい</span><a class="btn sub" href="../materials.html">サービス資料を見る</a></div>
+</div>
+  </div>
+</main>
+
+<footer class="b-footer">
+  <div class="b-footer-inner">
+    <div>
+      <p class="b-foot-brand">🪄 AI社員</p>
+      <p style="font-size:13px;color:#9AA6BB;margin:0;max-width:32em">中小企業の採用・発信をチームの戦力化で解決するAIキャラクターサービス。</p>
+    </div>
+    <div class="b-foot-links">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#privacy">プライバシーポリシー</a>
+      <a href="../index.html#tokutei">特定商取引法に基づく表記</a>
+      <a href="../index.html#company">運営会社</a>
+      <a href="index.html">ブログ</a>
+      <a href="editorial-policy.html">編集方針</a>
+    </div>
+  </div>
+  <div class="b-foot-bottom">© 2026 AI社員 All rights reserved.</div>
+</footer>
+
+</body>
+</html>

@@ -85,3 +85,14 @@ hr{border:0;border-top:1px solid var(--line);margin:36px 0}
 .article table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
 .article th,.article td{padding:9px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}
 .article thead th{background:var(--bg);font-weight:700}
+
+/* 2026-10-13 判断ボックス・状況別CTA */
+.article .judge{background:#fff8e6;border:1px solid #f0d58a;border-radius:10px;padding:14px 18px;margin:0 0 22px}
+.article .judge p{margin:0 0 6px}
+.article .judge ul{margin:0;padding-left:1.2em}
+.article .cta-split{border:2px solid var(--pri,#0B5FFF);border-radius:12px;padding:16px 18px;margin:8px 0 28px;background:#f5f8ff}
+.article .cta-split p{margin:0 0 8px;font-weight:700}
+.article .cta-split .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}
+.article .cta-split .row span{flex:1 1 240px;font-size:14.5px}
+.article .cta-split .btn{display:inline-block;background:var(--pri,#0B5FFF);color:#fff;font-weight:800;padding:9px 18px;border-radius:999px;font-size:14px}
+.article .cta-split .btn.sub{background:#fff;color:var(--pri,#0B5FFF);border:1px solid var(--pri,#0B5FFF)}

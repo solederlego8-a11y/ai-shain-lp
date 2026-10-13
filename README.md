@@ -46,5 +46,10 @@ GitHub Pages で公開しています。
 - [税理士・社労士・行政書士事務所の問い合わせ対応をAIで自動化する前に — 守秘義務と外注先の確認事項](https://solederlego8-a11y.github.io/ai-shain-lp/blog/shigyo-jimusho-toiawase-ai-himitsu-gimu.html)
 - [美容室・飲食店の口コミ返信をAIで代行・自動化する前に — Googleのポリシー、ステマ規制、返信の線引き](https://solederlego8-a11y.github.io/ai-shain-lp/blog/kuchikomi-henshin-ai-daiko-biyoshitsu-inshoku.html)
 - [AIの業務代行を発注する契約前チェックリスト — 秘密保持・再委託・成果物の権利・取適法で確認すること](https://solederlego8-a11y.github.io/ai-shain-lp/blog/ai-gyomu-itaku-keiyaku-mae-kakunin.html)
+- [AI業務自動化の依頼先はどれ？外注・SaaS・内製の判断フロー6問【中小企業】](https://solederlego8-a11y.github.io/ai-shain-lp/blog/ai-gyomu-itaku-erabikata-hub.html)
+- [見積書のAI自動作成は人の確認が前提｜外注前に決める5つの線引き](https://solederlego8-a11y.github.io/ai-shain-lp/blog/mitsumori-sho-ai-jidoka-sakusei-mae.html)
+- [FAX注文のAI入力・転記を外注する前に｜電子取引の保存と確認の線引き](https://solederlego8-a11y.github.io/ai-shain-lp/blog/fax-chumon-ai-nyuryoku-tenki-jidoka.html)
+- [従業員5人以下のAI導入は月額いくらから？発信と業務の費用の分かれ目](https://solederlego8-a11y.github.io/ai-shain-lp/blog/shoki-5nin-ika-ai-shain-hiyo.html)
+- [社内マニュアル・過去案件をAIで検索する前に｜営業秘密と整理の順番](https://solederlego8-a11y.github.io/ai-shain-lp/blog/manual-kako-anken-ai-kensaku-zokujinka.html)
 
 <!-- article-index:end -->
