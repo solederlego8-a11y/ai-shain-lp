@@ -204,4 +204,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://solederlego8-a11y.github.io/ai-shain-lp/blog/kyujin-hyo-ai-sakusei-rodo-joken-meiji-3koumoku.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://solederlego8-a11y.github.io/ai-shain-lp/blog/sns-kyujin-boshu-hissu-hyoji-6joho.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
