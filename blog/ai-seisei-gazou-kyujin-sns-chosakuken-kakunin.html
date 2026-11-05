@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- ga4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6023BYFDGZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6023BYFDGZ', { anonymize_ip: true });
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI生成画像を求人・SNSに使う前に｜文化庁の考え方で整理する著作権の確認ポイント｜AI社員ブログ</title>
+<meta name="description" content="AIで作った画像を求人バナーやSNS投稿に使う前に確認すること。文化庁「AIと著作権に関する考え方について」から、類似性・依拠性、故意・過失と措置、著作物性の判断要素を整理し、用途別の確認表と記録の取り方にまとめました。">
+<meta name="theme-color" content="#0B5FFF">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://solederlego8-a11y.github.io/ai-shain-lp/blog/ai-seisei-gazou-kyujin-sns-chosakuken-kakunin.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI社員">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://solederlego8-a11y.github.io/ai-shain-lp/blog/ai-seisei-gazou-kyujin-sns-chosakuken-kakunin.html">
+<meta property="og:title" content="AI生成画像を求人・SNSに使う前に｜文化庁の考え方で整理する著作権の確認ポイント">
+<meta property="og:description" content="AIで作った画像を求人バナーやSNS投稿に使う前に確認すること。文化庁「AIと著作権に関する考え方について」から、類似性・依拠性、故意・過失と措置、著作物性の判断要素を整理し、用途別の確認表と記録の取り方にまとめました。">
+<meta property="og:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+<!-- ga4-cv -->
+<script>
+if(typeof gtag==='function'){document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('data-cv-tracked'))return;var h=a.href||'';var has=function(s){return h.indexOf(s)>-1;};var asp=has('a8.net')?'a8':(has('rakuten.co.jp')||has('r10.to'))?'rakuten':(has('amazon.co.jp')||has('amzn.'))?'amazon':'';if(asp){gtag('event','affiliate_click',{asp:asp,link_url:h,link_text:(a.innerText||'').trim().slice(0,80),page_path:location.pathname});}else if(has('buy.stripe.com')){gtag('event','begin_checkout',{link_url:h,page_path:location.pathname});}},true);document.addEventListener('submit',function(e){var f=e.target;gtag('event','generate_lead',{form_id:f.id||f.getAttribute('data-subject')||f.action||'',page_path:location.pathname});},true);}
+</script>
+<!-- faq-schema -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "AIで作った画像を、求人広告やSNSに商用で使ってもよいですか。", "acceptedAnswer": {"@type": "Answer", "text": "著作権の面では、既存の著作物との類似性と依拠性の両方が認められると侵害になり得ると文化庁の資料は整理しています。商用利用が許されるかは、使うAIサービスの利用規約にもよるため、規約の確認が別に必要です。"}}, {"@type": "Question", "name": "プロンプトに作品名やキャラクター名を入れてもよいですか。", "acceptedAnswer": {"@type": "Answer", "text": "文化庁の資料は、既存の著作物の題号などの特定の固有名詞を入力する場合を、依拠性が認められる例として挙げています。避けるのが確実です。"}}, {"@type": "Question", "name": "似た画像が出ても、知らなかった場合は責任を問われませんか。", "acceptedAnswer": {"@type": "Answer", "text": "資料では、認識していなかったなど故意・過失が認められない場合、受け得る措置は差止請求にとどまり、損害賠償や刑事罰の対象にはならないと考えられるとされています。ただし、不当利得の返還が認められる可能性にも触れており、責任がないと断定はできません。"}}, {"@type": "Question", "name": "AIで作った画像は、自社の著作物になりますか。", "acceptedAnswer": {"@type": "Answer", "text": "個々の生成物ごとに、創作的寄与の程度などで個別に判断されます。指示の分量や試行回数だけでは決まらず、創作的表現といえる指示や、人による加筆・修正が考慮されるとされています。"}}, {"@type": "Question", "name": "この記事の内容は法的な保証になりますか。", "acceptedAnswer": {"@type": "Answer", "text": "なりません。文化庁の資料自体が、法的な拘束力を有するものではないと書かれています。個別の事案は、弁護士や弁理士などの専門家にご確認ください。"}}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "AI生成画像を求人・SNSに使う前に｜文化庁の考え方で整理する著作権の確認ポイント", "description": "AIで作った画像を求人バナーやSNS投稿に使う前に確認すること。文化庁「AIと著作権に関する考え方について」から、類似性・依拠性、故意・過失と措置、著作物性の判断要素を整理し、用途別の確認表と記録の取り方にまとめました。", "datePublished": "2026-11-05", "dateModified": "2026-11-05", "inLanguage": "ja", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://solederlego8-a11y.github.io/ai-shain-lp/blog/ai-seisei-gazou-kyujin-sns-chosakuken-kakunin.html"}, "author": {"@type": "Organization", "name": "AI社員 編集部", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/"}, "publisher": {"@type": "Organization", "name": "AI社員", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/", "parentOrganization": {"@type": "Organization", "@id": "https://solederlego8-a11y.github.io/#org", "name": "フォローズ"}}, "image": "https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg"}
+</script>
+</head>
+<body>
+
+<header class="b-header">
+  <div class="b-header-inner">
+    <a class="b-logo" href="../index.html"><span class="mark">🪄</span><span>AI社員</span></a>
+    <nav class="b-nav" aria-label="ナビゲーション">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#company">運営会社</a> <a href="https://solederlego8-a11y.github.io/">運営メディア一覧</a>
+      <a href="index.html">ブログ</a>
+    </nav>
+    <a class="b-cta" href="../index.html#contact">無料個別相談 →</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="index.html">← ブログ一覧</a> ／ 発信 ／ 著作権</p>
+    <h1>AI生成画像を求人・SNSに使う前に<br>文化庁の考え方で整理する著作権の確認ポイント</h1>
+    <p class="lead">AI画像の著作権で確認するのは、既存の作品に似ていないか（類似性）と、それを知って作らせていないか（依拠性）です。文化庁の資料をもとに、採用・SNS用画像の確認表を作りました。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap article">
+    <p class="byline">AI社員 編集部（運営：フォローズ）</p>
+    <p><time datetime="2026-11-05">更新日：2026年11月5日</time></p>
+
+<div class="tldr">
+  <p><strong>この記事の結論</strong></p>
+  <ul>
+    <li>AIで作った画像を求人やSNSに使うとき、著作権で最初に確認するのは<strong>既存の著作物に似ていないか（類似性）、それを知って作らせていないか（依拠性）</strong>です。文化庁の資料は、この2つがそろうと著作権侵害になり得ると整理しています</li>
+    <li>実在の作品・キャラクターの画像を入力したり、作品名などの固有名詞を指示に入れたりして作らせた場合は、依拠性が認められ、侵害が成立すると考えられる、と同資料に書かれています</li>
+    <li>「自社が作った画像に著作権があるか」は別の問いです。プロンプトの分量や試行回数だけでは決まらず、創作的な表現といえる指示や、人による加筆・修正の有無などで個別に判断されます</li>
+  </ul>
+</div>
+
+<div class="judge">
+  <p><strong>30秒で判断：この画像を採用・SNSに出してよいか</strong></p>
+  <ul>
+    <li><strong>実在のキャラクター・作品名・他社の画像を指示や元画像に使った</strong> → 公開しない。作り直す</li>
+    <li><strong>特定のイラストレーターの作風や、有名作品に「似て見える」画像が出た</strong> → 似ている元作品がないかを確認し、似ているなら使わない</li>
+    <li><strong>指示は一般的な内容（「笑顔の事務スタッフ」など）で、既存作品を意識していない</strong> → 公開前に類似画像がないかを確認し、記録を残す</li>
+    <li><strong>自社の画像を他社に無断転載されないよう守りたい</strong> → 著作物性は個別判断。人の手による加筆・修正を入れておく</li>
+  </ul>
+</div>
+
+<div class="cta-split">
+  <p>状況別の次の一歩</p>
+  <div class="row"><span>採用・SNSでAI画像を使うルールを整理したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する</a></div>
+  <div class="row"><span>採用・発信の対応範囲を資料で見たい</span><a class="btn sub" href="../materials.html">サービス資料を見る（無料）</a></div>
+</div>
+
+<p>「AI生成画像 求人 SNS 著作権」と調べている方は、求人バナーやSNS投稿の画像をAIで作りたいが、権利の面で問題にならないかを確認したい状況ではないでしょうか。この記事では、文化審議会著作権分科会法制度小委員会がまとめた「AIと著作権に関する考え方について」（令和6年3月15日）を読み、中小企業の採用・発信で確認する点を整理します。なお、同資料は考え方を示したもので、法的な拘束力はなく、個別の生成AIや技術について確定的な法的評価をするものでもないと本文に書かれています。個別の判断は専門家にご確認ください。</p>
+
+<h2>AIで作った画像を使うと、どんなときに著作権侵害になりますか？</h2>
+<p>文化庁の資料によると、既存の判例では、ある作品に既存の著作物との「類似性」と「依拠性」の両方が認められるときに著作権侵害となるとされており、生成AIを使った場合もこの考え方で整理されています（出典：<a href="https://www.bunka.go.jp/seisaku/bunkashingikai/chosakuken/pdf/94037901_01.pdf" target="_blank" rel="noopener">文化審議会著作権分科会法制度小委員会「AIと著作権に関する考え方について」令和6年3月15日</a>、公式ページは<a href="https://www.bunka.go.jp/seisaku/chosakuken/aiandcopyright.html" target="_blank" rel="noopener">文化庁「AIと著作権」</a>、確認日 2026-11-05）。</p>
+<table>
+  <tr><th>用語</th><th>定義（資料の趣旨）</th></tr>
+  <tr><td>類似性</td><td>既存の著作物の表現上の本質的な特徴を直接感得できること。表現そのものでない部分や、表現上の創作性がない部分が同じにすぎない場合は含まれない</td></tr>
+  <tr><td>依拠性</td><td>既存の著作物を知った上で、それに基づいて作ったこと。利用者が既存の著作物を認識していて生成させた場合は認められる</td></tr>
+</table>
+<p>定義文にすると、<strong>著作権侵害は、類似性と依拠性の両方がそろったときに成立し得るもの</strong>です。似ているだけ、あるいは知っていただけでは、直ちに侵害になるとは書かれていません。ただし、権利者が「既存の作品に接する機会があったこと」と「生成物に高度な類似性があること」を示せば、依拠性があるとの推認を得られると考えられる、とも資料は述べています。</p>
+
+<h2>どんな指示を入れると、依拠性が認められやすいですか？</h2>
+<p>資料は、AI利用者が既存の著作物を認識していて、生成AIで当該著作物の創作的表現を持つものを生成させた場合は、依拠性が認められ、侵害が成立すると考えられるとしています。例として挙げられているのは、次の2つです。</p>
+<ul>
+  <li>既存の著作物そのものを入力する場合（画像を入力して画像を得る「Image to Image」のような使い方）</li>
+  <li>既存の著作物の題号などの特定の固有名詞を入力する場合</li>
+</ul>
+<p>つまり、求人バナーを作るときに、他社のバナーや人気キャラクターの画像を元画像として読み込ませたり、作品名を指示に書いたりする使い方は避けるのが確実です。これは資料の記述から導いた編集部の整理で、「ここまでなら安全」という線を示すものではありません。</p>
+
+<h2>知らずに似た画像を公開してしまったら、どうなりますか？</h2>
+<p>資料は、侵害が認められた場合の措置を整理しています。受け得る措置は、差止請求、損害賠償請求、刑事罰で、差止請求は故意・過失を問わず可能とされます。損害賠償請求には故意または過失が必要で、刑事罰には故意が必要です。</p>
+<table>
+  <tr><th>措置</th><th>故意・過失が必要か（資料の整理）</th></tr>
+  <tr><td>差止請求</td><td>不要（故意・過失の有無を問わず可能）</td></tr>
+  <tr><td>損害賠償請求</td><td>必要（故意または過失）</td></tr>
+  <tr><td>刑事罰</td><td>必要（故意）</td></tr>
+</table>
+<p>利用者が侵害の元になった著作物を認識していなかったなどの事情で故意・過失が認められない場合、受け得る措置は差止請求にとどまり、損害賠償や刑事罰の対象にはならないと考えられる、と資料にあります。もっとも、同資料は、認識していなかった場合でも、使用料相当額などの不当利得の返還が認められる可能性があることにも触れています。「知らなかったから大丈夫」とは言い切れません。</p>
+
+<h2>自社が作った画像に、自社の著作権はありますか？</h2>
+<p>AIで作った画像が著作物になるかは、個々の生成物ごとに個別具体的に判断される、と資料は述べています。判断の要素として、次の3点が例示されています。</p>
+<table>
+  <tr><th>要素</th><th>資料の整理</th></tr>
+  <tr><td>① 指示・入力（プロンプト等）の分量・内容</td><td>創作的表現といえるものを具体的に示す詳細な指示は、創作的寄与があると評価される可能性を高める。長い指示でも、アイデアを示すにとどまる指示は判断に影響しない</td></tr>
+  <tr><td>② 生成の試行回数</td><td>試行回数が多いこと自体は判断に影響しない。ただし、生成物を確認して指示を修正しながら試行を重ねる場合は、著作物性が認められることも考えられる</td></tr>
+  <tr><td>③ 複数の生成物からの選択</td><td>単なる選択行為自体は判断に影響しない</td></tr>
+</table>
+<p>また、人間がAI生成物に創作的表現といえる加筆・修正を加えた部分には、通常、著作物性が認められると考えられる、とされています。求人バナーの文字組みやレイアウトを人が作り込む、画像に人が描き足す、といった工程は、この「加筆・修正」の考え方に関わります。ただし、どの程度で認められるかは個別判断で、本記事では判断できません。</p>
+
+<h2>採用・SNS用の画像で、公開前に何を確認しますか？（用途別の確認表）</h2>
+<table>
+  <tr><th>用途</th><th>公開前に確認すること（編集部の整理）</th><th>根拠</th></tr>
+  <tr><td>求人バナー・採用サイトの画像</td><td>元画像に他社のものを使っていないか／作品名・キャラクター名を指示に入れていないか／似ている既存画像がないか</td><td>文化庁資料：類似性・依拠性</td></tr>
+  <tr><td>SNSの毎日投稿用イラスト</td><td>特定の作家名や作品名を指定していないか／作成日と指示文を保存したか</td><td>文化庁資料：依拠性、故意・過失</td></tr>
+  <tr><td>社員の代わりに使うAIキャラクター</td><td>既存キャラクターに似ていないか／自社のキャラクターとして守りたい場合は、人が加筆・修正する工程を持つか</td><td>文化庁資料：著作物性</td></tr>
+  <tr><td>実在の人物に似せた画像</td><td>著作権とは別に、肖像などの権利が問題になり得る。本記事では扱わず、確認していない</td><td>（未確認）</td></tr>
+</table>
+<p>公開前の記録として残しておく項目は、次のとおりです。これは公式資料の項目ではなく、編集部の提案です。</p>
+<ul>
+  <li>□ 生成した日、使ったAIサービス名、指示文（プロンプト）の全文</li>
+  <li>□ 元画像として入力したものがないこと（ある場合は、権利者の許諾を確認した記録）</li>
+  <li>□ 公開前に、画像検索などで似た既存画像がないかを確認した日と結果</li>
+  <li>□ 使ったサービスの利用規約を確認した日（商用利用の可否は、サービスごとの規約によります。本記事では特定のサービスの規約を確認していません）</li>
+  <li>□ 人が加筆・修正した内容のメモ</li>
+</ul>
+<p>文化庁は、別資料として<a href="https://www.bunka.go.jp/seisaku/chosakuken/pdf/94097701_01.pdf" target="_blank" rel="noopener">「AIと著作権に関するチェックリスト＆ガイダンス」（令和6年7月31日）</a>も公開しています。本記事では、この資料の中身は確認していません。実際の運用では、あわせて参照することをお勧めします。</p>
+
+<div class="cta-split">
+  <p>状況別の次の一歩</p>
+  <div class="row"><span>AI画像を使う前の確認手順を、自社の運用に合わせて整えたい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する</a></div>
+</div>
+
+<h2>AI社員に相談できること</h2>
+<p>AI社員では、中小企業の採用・発信の運用について相談を受け付けています。画像づくりでは、指示文と確認記録を残す運用や、人の手を入れる工程を最初に決めておく進め方を一緒に整理できます。法律上の判断は専門家への確認を前提にしています。AIキャラクターを発信に使う場合の考え方は、<a href="ai-character-hasshin-hajimekata.html">AIキャラクターで発信を始めるときの進め方</a>もご覧ください。</p>
+
+<h2>よくある質問</h2>
+<h3>AIで作った画像を、求人広告やSNSに商用で使ってもよいですか。</h3>
+<p>著作権の面では、既存の著作物との類似性と依拠性の両方が認められると侵害になり得ると文化庁の資料は整理しています。商用利用が許されるかは、使うAIサービスの利用規約にもよるため、規約の確認が別に必要です。</p>
+<h3>プロンプトに作品名やキャラクター名を入れてもよいですか。</h3>
+<p>文化庁の資料は、既存の著作物の題号などの特定の固有名詞を入力する場合を、依拠性が認められる例として挙げています。避けるのが確実です。</p>
+<h3>似た画像が出ても、知らなかった場合は責任を問われませんか。</h3>
+<p>資料では、認識していなかったなど故意・過失が認められない場合、受け得る措置は差止請求にとどまり、損害賠償や刑事罰の対象にはならないと考えられるとされています。ただし、不当利得の返還が認められる可能性にも触れており、責任がないと断定はできません。</p>
+<h3>AIで作った画像は、自社の著作物になりますか。</h3>
+<p>個々の生成物ごとに、創作的寄与の程度などで個別に判断されます。指示の分量や試行回数だけでは決まらず、創作的表現といえる指示や、人による加筆・修正が考慮されるとされています。</p>
+<h3>この記事の内容は法的な保証になりますか。</h3>
+<p>なりません。文化庁の資料自体が、法的な拘束力を有するものではないと書かれています。個別の事案は、弁護士や弁理士などの専門家にご確認ください。</p>
+
+<div class="note">本記事は文化審議会著作権分科会法制度小委員会「AIと著作権に関する考え方について」（令和6年3月15日）の整理であり、法律上の個別の助言ではありません。情報は2026年11月5日時点のものです。出典：<a href="https://www.bunka.go.jp/seisaku/bunkashingikai/chosakuken/pdf/94037901_01.pdf" target="_blank" rel="noopener">文化庁 AIと著作権に関する考え方について（PDF）</a>／<a href="https://www.bunka.go.jp/seisaku/chosakuken/aiandcopyright.html" target="_blank" rel="noopener">文化庁 AIと著作権</a>。</div>
+
+<hr>
+    <p>次に読むなら：<a href="ai-character-hasshin-hajimekata.html">AIキャラクターで発信を始めるときの進め方</a> ／ <a href="sns-saiyo-tsuzukanai.html">採用SNSが続かない理由</a> ／ <a href="oubosha-rirekisho-seiseiai-nyuryoku-kojin-joho.html">応募者の履歴書を生成AIに入力してよいか</a></p>
+    <a class="back" href="index.html">← ブログ一覧に戻る</a>
+
+    <div class="share" aria-label="この記事をシェア">
+      <span class="share-label">シェア：</span>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=AI%E7%94%9F%E6%88%90%E7%94%BB%E5%83%8F%E3%82%92%E6%B1%82%E4%BA%BA%E3%83%BBSNS%E3%81%AB%E4%BD%BF%E3%81%86%E5%89%8D%E3%81%AB%EF%BD%9C%E6%96%87%E5%8C%96%E5%BA%81%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9%E3%81%A7%E6%95%B4%E7%90%86%E3%81%99%E3%82%8B%E8%91%97%E4%BD%9C%E6%A8%A9%E3%81%AE%E7%A2%BA%E8%AA%8D%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fai-seisei-gazou-kyujin-sns-chosakuken-kakunin.html">X</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fai-seisei-gazou-kyujin-sns-chosakuken-kakunin.html&amp;title=AI%E7%94%9F%E6%88%90%E7%94%BB%E5%83%8F%E3%82%92%E6%B1%82%E4%BA%BA%E3%83%BBSNS%E3%81%AB%E4%BD%BF%E3%81%86%E5%89%8D%E3%81%AB%EF%BD%9C%E6%96%87%E5%8C%96%E5%BA%81%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9%E3%81%A7%E6%95%B4%E7%90%86%E3%81%99%E3%82%8B%E8%91%97%E4%BD%9C%E6%A8%A9%E3%81%AE%E7%A2%BA%E8%AA%8D%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88">はてブ</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fai-seisei-gazou-kyujin-sns-chosakuken-kakunin.html">LINE</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Fai-seisei-gazou-kyujin-sns-chosakuken-kakunin.html">Facebook</a>
+      <button type="button" class="share-btn share-copy" data-url="https://solederlego8-a11y.github.io/ai-shain-lp/blog/ai-seisei-gazou-kyujin-sns-chosakuken-kakunin.html">リンクをコピー</button>
+    </div>
+    <script src="share.js"></script>
+
+    <div class="cta-split">
+  <p>ここまで読んだ方へ</p>
+  <div class="row"><span>採用・SNSでAI画像を使うルールを相談したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する（30秒で入力）</a></div>
+  <div class="row"><span>料金とプランの全体を先に確認したい</span><a class="btn sub" href="../materials.html">サービス資料を見る</a></div>
+</div>
+</main>
+
+<footer class="b-footer">
+  <div class="b-footer-inner">
+    <div>
+      <p class="b-foot-brand">🪄 AI社員</p>
+      <p style="font-size:13px;color:#9AA6BB;margin:0;max-width:32em">中小企業の採用・発信をチームの戦力化で解決するAIキャラクターサービス。</p>
+    </div>
+    <div class="b-foot-links">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#privacy">プライバシーポリシー</a>
+      <a href="../index.html#tokutei">特定商取引法に基づく表記</a>
+      <a href="../index.html#company">運営会社</a>
+      <a href="index.html">ブログ</a>
+      <a href="editorial-policy.html">編集方針</a>
+    </div>
+  </div>
+  <div class="b-foot-bottom">© 2026 AI社員 All rights reserved.</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- ga4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6023BYFDGZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6023BYFDGZ', { anonymize_ip: true });
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>応募者の履歴書を生成AIに入力してよい？個人情報保護委員会の注意点と採用担当の確認表｜AI社員ブログ</title>
+<meta name="description" content="応募者の履歴書・職務経歴書を生成AIに入力する前に確認すること。個人情報保護委員会の注意喚起と、厚生労働省の指針（応募者の個人情報の取扱い）を整理し、情報の種類別の確認表と社内ルールのチェックリストにまとめました。">
+<meta name="theme-color" content="#0B5FFF">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://solederlego8-a11y.github.io/ai-shain-lp/blog/oubosha-rirekisho-seiseiai-nyuryoku-kojin-joho.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI社員">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://solederlego8-a11y.github.io/ai-shain-lp/blog/oubosha-rirekisho-seiseiai-nyuryoku-kojin-joho.html">
+<meta property="og:title" content="応募者の履歴書を生成AIに入力してよい？個人情報保護委員会の注意点と採用担当の確認表">
+<meta property="og:description" content="応募者の履歴書・職務経歴書を生成AIに入力する前に確認すること。個人情報保護委員会の注意喚起と、厚生労働省の指針（応募者の個人情報の取扱い）を整理し、情報の種類別の確認表と社内ルールのチェックリストにまとめました。">
+<meta property="og:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+<!-- ga4-cv -->
+<script>
+if(typeof gtag==='function'){document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('data-cv-tracked'))return;var h=a.href||'';var has=function(s){return h.indexOf(s)>-1;};var asp=has('a8.net')?'a8':(has('rakuten.co.jp')||has('r10.to'))?'rakuten':(has('amazon.co.jp')||has('amzn.'))?'amazon':'';if(asp){gtag('event','affiliate_click',{asp:asp,link_url:h,link_text:(a.innerText||'').trim().slice(0,80),page_path:location.pathname});}else if(has('buy.stripe.com')){gtag('event','begin_checkout',{link_url:h,page_path:location.pathname});}},true);document.addEventListener('submit',function(e){var f=e.target;gtag('event','generate_lead',{form_id:f.id||f.getAttribute('data-subject')||f.action||'',page_path:location.pathname});},true);}
+</script>
+<!-- faq-schema -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "応募者の履歴書をChatGPTなどの生成AIに貼り付けてもよいですか。", "acceptedAnswer": {"@type": "Answer", "text": "個人情報保護委員会は、本人の同意なく個人データをプロンプトに入力し、応答の出力以外の目的で取り扱われる場合は、個人情報保護法に違反する可能性があるとしています。貼り付ける前に、利用目的の範囲内か、提供事業者が機械学習に利用しないこと等を確認してください。"}}, {"@type": "Question", "name": "氏名を消して入力すれば問題ありませんか。", "acceptedAnswer": {"@type": "Answer", "text": "氏名を外した情報が個人情報に当たるかは、他の情報との組み合わせによる個別判断です。本記事では判断基準を確認していないため、断定できません。専門家にご確認ください。"}}, {"@type": "Question", "name": "応募者の本籍や出生地は、採用で聞いてよいですか。", "acceptedAnswer": {"@type": "Answer", "text": "厚生労働省の指針は、本籍・出生地・思想及び信条・労働組合への加入状況などの収集を、原則として行ってはならないとしています。特別な職業上の必要性があり、目的を示して本人から収集する場合に限った例外が書かれています。"}}, {"@type": "Question", "name": "採用が終わった後、応募書類はいつまで保管できますか。", "acceptedAnswer": {"@type": "Answer", "text": "指針は、収集目的に照らして保管する必要がなくなった個人情報を破棄または削除する措置を講じるよう求めています。具体的な期間は、確認した資料には書かれていません。社会保険労務士など専門家にご確認ください。"}}, {"@type": "Question", "name": "違反した場合の罰則は何ですか。", "acceptedAnswer": {"@type": "Answer", "text": "確認した資料には、罰則の記載がありませんでした。個別の事案は、個人情報保護委員会や都道府県労働局、専門家にご確認ください。"}}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "応募者の履歴書を生成AIに入力してよい？個人情報保護委員会の注意点と採用担当の確認表", "description": "応募者の履歴書・職務経歴書を生成AIに入力する前に確認すること。個人情報保護委員会の注意喚起と、厚生労働省の指針（応募者の個人情報の取扱い）を整理し、情報の種類別の確認表と社内ルールのチェックリストにまとめました。", "datePublished": "2026-11-05", "dateModified": "2026-11-05", "inLanguage": "ja", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://solederlego8-a11y.github.io/ai-shain-lp/blog/oubosha-rirekisho-seiseiai-nyuryoku-kojin-joho.html"}, "author": {"@type": "Organization", "name": "AI社員 編集部", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/"}, "publisher": {"@type": "Organization", "name": "AI社員", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/", "parentOrganization": {"@type": "Organization", "@id": "https://solederlego8-a11y.github.io/#org", "name": "フォローズ"}}, "image": "https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg"}
+</script>
+</head>
+<body>
+
+<header class="b-header">
+  <div class="b-header-inner">
+    <a class="b-logo" href="../index.html"><span class="mark">🪄</span><span>AI社員</span></a>
+    <nav class="b-nav" aria-label="ナビゲーション">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#company">運営会社</a> <a href="https://solederlego8-a11y.github.io/">運営メディア一覧</a>
+      <a href="index.html">ブログ</a>
+    </nav>
+    <a class="b-cta" href="../index.html#contact">無料個別相談 →</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="index.html">← ブログ一覧</a> ／ 採用 ／ 個人情報</p>
+    <h1>応募者の履歴書を生成AIに入力してよい？<br>個人情報保護委員会の注意点と採用担当の確認表</h1>
+    <p class="lead">履歴書や面接メモをAIに入れる前に、利用目的の範囲内か、提供事業者が学習に使わないかを確認します。個人情報保護委員会と厚生労働省の公開資料を、採用担当向けの表に整理しました。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap article">
+    <p class="byline">AI社員 編集部（運営：フォローズ）</p>
+    <p><time datetime="2026-11-05">更新日：2026年11月5日</time></p>
+
+<div class="tldr">
+  <p><strong>この記事の結論</strong></p>
+  <ul>
+    <li>応募者の履歴書など、<strong>氏名や連絡先を含む情報を生成AIに入力する</strong>ときは、特定した利用目的の範囲内かを確認します。個人情報保護委員会は、本人の同意なく個人データを入力し、その情報が応答の出力以外の目的で取り扱われる場合は、個人情報保護法に違反する可能性があるとしています</li>
+    <li>入力するなら、AIサービスの提供事業者が入力した個人データを<strong>機械学習に利用しないこと等</strong>を事前に確認します。利用規約やプライバシーポリシーの確認も、同じ注意喚起で求められています</li>
+    <li>採用では、厚生労働省の指針により、応募者の個人情報は<strong>収集目的の範囲内でのみ保管・使用</strong>し、本籍・出生地・思想信条・労働組合への加入状況などは原則として収集しません。AIに入れる以前に、集めない項目があります</li>
+  </ul>
+</div>
+
+<div class="judge">
+  <p><strong>30秒で判断：応募者の情報をAIに入れる前の分かれ道</strong></p>
+  <ul>
+    <li><strong>氏名・連絡先・生年月日などが入った履歴書や職務経歴書をそのまま貼る</strong> → 利用目的の範囲内か、提供事業者が学習に使わない設定・契約かを確認するまで入力しない</li>
+    <li><strong>本籍・出生地・家族構成・思想信条を書かせる欄が応募書類にある</strong> → AI以前に、その項目を集めてよいかを見直す</li>
+    <li><strong>応募者への案内に「AIで書類を整理する」とは書いていない</strong> → 利用目的の書き方に含まれるかを確認する（後述）</li>
+    <li><strong>個人が特定できる情報を外した要約をAIに渡したい</strong> → どこまで外せば個人情報でなくなるかは個別判断のため、専門家に確認する</li>
+  </ul>
+</div>
+
+<div class="cta-split">
+  <p>状況別の次の一歩</p>
+  <div class="row"><span>採用でAIを使う範囲と、応募者情報の扱いを整理したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する</a></div>
+  <div class="row"><span>採用・発信の対応範囲を資料で見たい</span><a class="btn sub" href="../materials.html">サービス資料を見る（無料）</a></div>
+</div>
+
+<p>「履歴書 生成AI 入力」と調べている方は、応募書類の読み込みや面接メモの整理にAIを使いたいが、応募者の個人情報を入れてよいのかを確認したい状況ではないでしょうか。この記事では、個人情報保護委員会の生成AIに関する注意喚起（令和5年6月2日）と、厚生労働省が公開している職業安定法に基づく指針の「求職者等の個人情報の取扱い」の部分を読み、採用担当が入力前に確認する点を表にまとめます。法律上の個別の助言ではなく、公開資料の整理です。</p>
+
+<h2>応募者の履歴書を生成AIに入力すると、何が問題になりますか？</h2>
+<p>問題になるのは、入力した個人データが、本来の目的である応答の出力以外の目的で取り扱われる場合です。個人情報保護委員会の注意喚起は、個人情報取扱事業者が、あらかじめ本人の同意を得ることなく生成AIサービスに個人データを含むプロンプトを入力し、その個人データが応答結果の出力以外の目的で取り扱われる場合、個人情報保護法の規定に違反することとなる可能性があるとしています。</p>
+<p>定義文として整理すると、<strong>プロンプトとは、生成AIサービスに入力する質問・作業指示のこと</strong>です。個人情報保護委員会は、生成AIサービスを「質問・作業指示（プロンプト入力）等に応えて文章・画像等を生成するAIを利用したサービス」と説明しています。履歴書の全文を貼り付けて「要約して」と頼む行為は、氏名や連絡先を含む個人データを含むプロンプトの入力に当たり得ます。</p>
+
+<h2>入力する前に、公式資料は何を確認するよう求めていますか？</h2>
+<p>個人情報保護委員会の注意喚起は、個人情報取扱事業者に対して次の2点を挙げています。表は、原文の趣旨を採用の場面に当てはめて並べた編集部の整理です（出典：<a href="https://www.ppc.go.jp/files/pdf/230602_alert_generative_AI_service.pdf" target="_blank" rel="noopener">個人情報保護委員会「生成AIサービスの利用に関する注意喚起等」令和5年6月2日</a>、確認日 2026-11-05）。</p>
+<table>
+  <tr><th>確認すること</th><th>公式資料の趣旨</th><th>採用担当の確認の仕方（編集部の整理）</th></tr>
+  <tr><td>利用目的の範囲内か</td><td>個人情報を含むプロンプトを入力する場合は、特定された利用目的を達成するために必要な範囲内であることを十分に確認する</td><td>応募者に示している利用目的に、書類の整理・要約が含まれるかを見る</td></tr>
+  <tr><td>応答の出力以外の目的で扱われないか</td><td>同意なく個人データを入力し、応答の出力以外の目的で取り扱われる場合は違反となる可能性がある。その場合は、提供事業者が個人データを機械学習に利用しないこと等を十分に確認する</td><td>使うAIサービスが、入力内容を学習に使わない設定・契約になっているかを確認する</td></tr>
+  <tr><td>利用規約等の確認</td><td>提供事業者の利用規約やプライバシーポリシー等を十分に確認し、入力する情報の内容等を踏まえて適切に判断する（一般の利用者向けの留意点として記載）</td><td>採用用途でその規約のまま使ってよいか、規約の日付とともに記録する</td></tr>
+</table>
+<p>なお、注意喚起は、入力された個人情報が生成AIの機械学習に利用され、他の情報と統計的に結びついた上で、正確または不正確な内容で出力されるリスクがあることにも触れています。応募者の情報が学習に使われる設定のまま入力することは、このリスクを自社が引き受けることを意味します。</p>
+
+<h2>採用の応募者情報には、AI以外にどんなルールがありますか？</h2>
+<p>職業安定法に基づく厚生労働省の指針は、労働者の募集を行う者に、応募者（求職者等）の個人情報の取扱いについて次のことを求めています（出典：<a href="https://www.mhlw.go.jp/content/001003997.pdf" target="_blank" rel="noopener">厚生労働省「職業紹介事業者、求人者、労働者の募集を行う者…がその責務等に関して適切に対処するための指針」（平成11年労働省告示第141号、最終改正 令和6年厚生労働省告示第318号）第五</a>、確認日 2026-11-05。条文の一覧は<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/haken-shoukai/shoukaihourei.html" target="_blank" rel="noopener">厚生労働省の法令・指針のページ</a>）。</p>
+<table>
+  <tr><th>指針（第五）の項目</th><th>書かれていること（要旨）</th></tr>
+  <tr><td>目的の明示</td><td>個人情報がどのような目的で収集・保管・使用されるのかを、求職者等が一般的かつ合理的に想定できる程度に具体的に明示する</td></tr>
+  <tr><td>収集してはならない情報</td><td>業務の目的の達成に必要な範囲で、目的を明らかにして収集する。人種・民族・社会的身分・門地・本籍・出生地その他社会的差別の原因となるおそれのある事項、思想及び信条、労働組合への加入状況は、原則として収集してはならない（特別な職業上の必要性があり、収集目的を示して本人から収集する場合を除く）</td></tr>
+  <tr><td>収集の手段</td><td>本人から直接収集する、本人の同意の下で本人以外から収集する、本人が公開している情報を収集するなど、適法かつ公正な手段による</td></tr>
+  <tr><td>保管・使用の範囲</td><td>保管・使用は収集目的の範囲に限る。他の目的で使うには、その目的を示して本人の同意を得る場合などに限られる</td></tr>
+  <tr><td>同意の取り方</td><td>同意を求める事項を可能な限り具体的かつ詳細に示す。業務の目的に必要な範囲を超える収集・保管・使用への同意を、募集の条件としない</td></tr>
+  <tr><td>適正な管理</td><td>正確・最新に保つ措置、漏えい・滅失・毀損の防止、権限のない者のアクセス防止、保管の必要がなくなった情報の破棄・削除の措置を講じ、求められたら説明する</td></tr>
+  <tr><td>個人情報保護法の遵守</td><td>個人情報取扱事業者に該当する場合は、個人情報保護法の義務も守る</td></tr>
+</table>
+<p>ここから、採用担当が確認できる点は3つに整理できます。1つ目は<strong>応募者に示している利用目的の中に、AIによる書類の整理・要約が含まれるか</strong>です。2つ目は<strong>上の「収集してはならない情報」を、そもそも応募書類で求めていないか</strong>です。3つ目は<strong>選考が終わって保管の必要がなくなった書類を、AIサービス側の履歴も含めて破棄・削除できるか</strong>です。3つ目の「AIサービス側に履歴が残るか」は、サービスごとの仕様によるため、本記事では確認していません。</p>
+
+<h2>どの情報なら、AIに入力できますか？（情報の種類別の整理）</h2>
+<p>次の表は、公開資料から言える範囲と、言えない範囲を分けた編集部の整理です。「入力してよい」と断定する行はありません。判断が分かれる行は、専門家への確認が前提です。</p>
+<table>
+  <tr><th>入力したい情報</th><th>公開資料から言えること</th><th>入力前に確認すること</th></tr>
+  <tr><td>氏名・連絡先・生年月日・住所が入った履歴書の全文</td><td>個人データを含むプロンプトに当たり得る。同意なく入力し、出力以外の目的で扱われる場合は違反の可能性（個人情報保護委員会）</td><td>利用目的の範囲／提供事業者が学習に使わないこと等／利用規約／社内の承認</td></tr>
+  <tr><td>職務経歴・スキルのみを抜き出した文章</td><td>氏名等を外しても、個人情報に当たるかは情報の組み合わせによる個別判断。本記事では判断基準を確認していない</td><td>他の情報と照らして個人が分かるか／専門家への確認</td></tr>
+  <tr><td>本籍・出生地・思想信条・労働組合への加入状況</td><td>指針により原則として収集してはならない項目</td><td>収集していること自体を見直す。AIに入れる以前の問題</td></tr>
+  <tr><td>面接で聞いた内容のメモ</td><td>応募者の個人情報として、収集目的の範囲内でのみ保管・使用する（指針）</td><td>評価に使うことを応募者に示しているか</td></tr>
+  <tr><td>募集要項・求人票（応募者の情報を含まないもの）</td><td>応募者の個人情報の問題は生じない</td><td>労働条件の明示事項（<a href="kyujin-hyo-ai-sakusei-rodo-joken-meiji-3koumoku.html">求人票の労働条件明示3項目</a>）</td></tr>
+</table>
+
+<div class="cta-split">
+  <p>状況別の次の一歩</p>
+  <div class="row"><span>応募書類をAIで扱うときの社内ルールの作り方から相談したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する</a></div>
+</div>
+
+<h2>応募者の情報を扱うAIの社内ルールには、何を書けばよいですか？</h2>
+<p>公開資料に基づいて、最低限そろえておきたい項目をチェックリストにしました。採用担当と経営者が、導入前に1枚で確認できる形です。</p>
+<ul>
+  <li>□ 応募者に示す利用目的に、書類の整理・要約など、AIを使う作業が含まれている（指針：目的の明示）</li>
+  <li>□ 使うAIサービスの提供事業者が、入力した個人データを機械学習に利用しないこと等を確認し、確認日と根拠（規約のURLと日付）を残した（個人情報保護委員会）</li>
+  <li>□ 応募書類で、本籍・出生地・思想信条・労働組合への加入状況などを求めていない（指針：収集してはならない情報）</li>
+  <li>□ 個人アカウントではなく、会社が契約・管理するアカウントで使う（編集部の提案。公式資料の項目ではありません）</li>
+  <li>□ 選考終了後に、AIサービス上の入力履歴を含めて削除する手順がある（指針：保管の必要がなくなった情報の破棄・削除）</li>
+  <li>□ AIの出力を、人が原文と照合してから評価や連絡に使う。注意喚起は、応答結果に不正確な内容が含まれることがある点を挙げています</li>
+</ul>
+<p>採用の合否そのものをAIに判定させる運用は、本記事では扱っていません。公開資料から確認できたのは、個人情報の取扱いの部分に限られます。</p>
+
+<h2>AI社員に相談できること</h2>
+<p>AI社員では、中小企業の採用・発信の運用について相談を受け付けています。応募書類のように個人情報を含む作業では、AIに任せる範囲を最初に決め、人が管理する情報と下書きの補助とを分ける進め方を一緒に整理できます。法律上の判断は専門家への確認を前提にしています。</p>
+
+<h2>よくある質問</h2>
+<h3>応募者の履歴書をChatGPTなどの生成AIに貼り付けてもよいですか。</h3>
+<p>個人情報保護委員会は、本人の同意なく個人データをプロンプトに入力し、応答の出力以外の目的で取り扱われる場合は、個人情報保護法に違反する可能性があるとしています。貼り付ける前に、利用目的の範囲内か、提供事業者が機械学習に利用しないこと等を確認してください。</p>
+<h3>氏名を消して入力すれば問題ありませんか。</h3>
+<p>氏名を外した情報が個人情報に当たるかは、他の情報との組み合わせによる個別判断です。本記事では判断基準を確認していないため、断定できません。専門家にご確認ください。</p>
+<h3>応募者の本籍や出生地は、採用で聞いてよいですか。</h3>
+<p>厚生労働省の指針は、本籍・出生地・思想及び信条・労働組合への加入状況などの収集を、原則として行ってはならないとしています。特別な職業上の必要性があり、目的を示して本人から収集する場合に限った例外が書かれています。</p>
+<h3>採用が終わった後、応募書類はいつまで保管できますか。</h3>
+<p>指針は、収集目的に照らして保管する必要がなくなった個人情報を破棄または削除する措置を講じるよう求めています。具体的な期間は、確認した資料には書かれていません。社会保険労務士など専門家にご確認ください。</p>
+<h3>違反した場合の罰則は何ですか。</h3>
+<p>確認した資料には、罰則の記載がありませんでした。個別の事案は、個人情報保護委員会や都道府県労働局、専門家にご確認ください。</p>
+
+<div class="note">本記事は個人情報保護委員会と厚生労働省が公開している情報の整理であり、法律上の個別の助言ではありません。情報は2026年11月5日時点のものです。出典：<a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/" target="_blank" rel="noopener">個人情報保護委員会 生成AIサービスの利用に関する注意喚起等</a>／<a href="https://www.mhlw.go.jp/content/001003997.pdf" target="_blank" rel="noopener">厚生労働省 職業安定法に基づく指針（PDF）</a>。</div>
+
+<hr>
+    <p>次に読むなら：<a href="sns-kyujin-boshu-hissu-hyoji-6joho.html">SNSで求人を出すときに必ず載せる6項目</a> ／ <a href="kyujin-hyo-ai-sakusei-rodo-joken-meiji-3koumoku.html">求人票をAIで下書きする前に確認する労働条件3項目</a> ／ <a href="shigyo-jimusho-toiawase-ai-himitsu-gimu.html">士業事務所の問い合わせ対応とAI・秘密保持義務</a></p>
+    <a class="back" href="index.html">← ブログ一覧に戻る</a>
+
+    <div class="share" aria-label="この記事をシェア">
+      <span class="share-label">シェア：</span>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=%E5%BF%9C%E5%8B%9F%E8%80%85%E3%81%AE%E5%B1%A5%E6%AD%B4%E6%9B%B8%E3%82%92%E7%94%9F%E6%88%90AI%E3%81%AB%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%A6%E3%82%88%E3%81%84%EF%BC%9F%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E4%BF%9D%E8%AD%B7%E5%A7%94%E5%93%A1%E4%BC%9A%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%A8%E6%8E%A1%E7%94%A8%E6%8B%85%E5%BD%93%E3%81%AE%E7%A2%BA%E8%AA%8D%E8%A1%A8&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Foubosha-rirekisho-seiseiai-nyuryoku-kojin-joho.html">X</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Foubosha-rirekisho-seiseiai-nyuryoku-kojin-joho.html&amp;title=%E5%BF%9C%E5%8B%9F%E8%80%85%E3%81%AE%E5%B1%A5%E6%AD%B4%E6%9B%B8%E3%82%92%E7%94%9F%E6%88%90AI%E3%81%AB%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%A6%E3%82%88%E3%81%84%EF%BC%9F%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E4%BF%9D%E8%AD%B7%E5%A7%94%E5%93%A1%E4%BC%9A%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%A8%E6%8E%A1%E7%94%A8%E6%8B%85%E5%BD%93%E3%81%AE%E7%A2%BA%E8%AA%8D%E8%A1%A8">はてブ</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Foubosha-rirekisho-seiseiai-nyuryoku-kojin-joho.html">LINE</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Foubosha-rirekisho-seiseiai-nyuryoku-kojin-joho.html">Facebook</a>
+      <button type="button" class="share-btn share-copy" data-url="https://solederlego8-a11y.github.io/ai-shain-lp/blog/oubosha-rirekisho-seiseiai-nyuryoku-kojin-joho.html">リンクをコピー</button>
+    </div>
+    <script src="share.js"></script>
+
+    <div class="cta-split">
+  <p>ここまで読んだ方へ</p>
+  <div class="row"><span>応募書類をAIで扱うときの社内ルールを相談したい</span><a class="btn" href="../index.html#contact">無料個別相談を予約する（30秒で入力）</a></div>
+  <div class="row"><span>料金とプランの全体を先に確認したい</span><a class="btn sub" href="../materials.html">サービス資料を見る</a></div>
+</div>
+</main>
+
+<footer class="b-footer">
+  <div class="b-footer-inner">
+    <div>
+      <p class="b-foot-brand">🪄 AI社員</p>
+      <p style="font-size:13px;color:#9AA6BB;margin:0;max-width:32em">中小企業の採用・発信をチームの戦力化で解決するAIキャラクターサービス。</p>
+    </div>
+    <div class="b-foot-links">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#privacy">プライバシーポリシー</a>
+      <a href="../index.html#tokutei">特定商取引法に基づく表記</a>
+      <a href="../index.html#company">運営会社</a>
+      <a href="index.html">ブログ</a>
+      <a href="editorial-policy.html">編集方針</a>
+    </div>
+  </div>
+  <div class="b-foot-bottom">© 2026 AI社員 All rights reserved.</div>
+</footer>
+
+</body>
+</html>
