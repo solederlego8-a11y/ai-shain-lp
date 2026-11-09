@@ -228,4 +228,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://solederlego8-a11y.github.io/ai-shain-lp/blog/sns-present-campaign-keihin-jougen-keihyoho-chusho.html</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://solederlego8-a11y.github.io/ai-shain-lp/blog/sns-pr-hyoji-suteuma-kisei-chusho-kigyo-handan.html</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
