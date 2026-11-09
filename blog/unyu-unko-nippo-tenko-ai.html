@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- ga4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6023BYFDGZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6023BYFDGZ', { anonymize_ip: true });
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>運送会社の運行日報・点呼記録をAIで下書きする前に — ドライバーの記録作業と、導入前に決める5つのこと｜AI社員ブログ</title>
+<meta name="description" content="中小運送会社向けに、運行日報・乗務記録・点呼記録の下書きをAIで作る仕組み、AIに任せる範囲と運行管理者が確認すべき項目、ドライバーの時間外労働の上限規制（2024年4月から年960時間）との関係、導入前に決める5つのことを整理します。">
+<meta name="theme-color" content="#0B5FFF">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://solederlego8-a11y.github.io/ai-shain-lp/blog/unyu-unko-nippo-tenko-ai.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI社員">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://solederlego8-a11y.github.io/ai-shain-lp/blog/unyu-unko-nippo-tenko-ai.html">
+<meta property="og:title" content="運送会社の運行日報・点呼記録をAIで下書きする前に — ドライバーの記録作業と、導入前に決める5つのこと">
+<meta property="og:description" content="中小運送会社向けに、運行日報・乗務記録・点呼記録の下書きをAIで作る仕組み、AIに任せる範囲と運行管理者が確認すべき項目、ドライバーの時間外労働の上限規制（2024年4月から年960時間）との関係、導入前に決める5つのことを整理します。">
+<meta property="og:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+<!-- ga4-cv -->
+<script>
+if(typeof gtag==='function'){document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a||a.hasAttribute('data-cv-tracked'))return;var h=a.href||'';var has=function(s){return h.indexOf(s)>-1;};var asp=has('a8.net')?'a8':(has('rakuten.co.jp')||has('r10.to'))?'rakuten':(has('amazon.co.jp')||has('amzn.'))?'amazon':'';if(asp){gtag('event','affiliate_click',{asp:asp,link_url:h,link_text:(a.innerText||'').trim().slice(0,80),page_path:location.pathname});}else if(has('buy.stripe.com')){gtag('event','begin_checkout',{link_url:h,page_path:location.pathname});}},true);document.addEventListener('submit',function(e){var f=e.target;gtag('event','generate_lead',{form_id:f.id||f.getAttribute('data-subject')||f.action||'',page_path:location.pathname});},true);}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "運送会社の運行日報・点呼記録をAIで下書きする前に — ドライバーの記録作業と、導入前に決める5つのこと", "description": "中小運送会社向けに、運行日報・乗務記録・点呼記録の下書きをAIで作る仕組み、AIに任せる範囲と運行管理者が確認すべき項目、ドライバーの時間外労働の上限規制（2024年4月から年960時間）との関係、導入前に決める5つのことを整理します。", "datePublished": "2026-11-09", "dateModified": "2026-11-09", "inLanguage": "ja", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://solederlego8-a11y.github.io/ai-shain-lp/blog/unyu-unko-nippo-tenko-ai.html"}, "author": {"@type": "Organization", "name": "AI社員 編集部", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/"}, "publisher": {"@type": "Organization", "name": "AI社員", "url": "https://solederlego8-a11y.github.io/ai-shain-lp/", "parentOrganization": {"@type": "Organization", "@id": "https://solederlego8-a11y.github.io/#org", "name": "フォローズ"}}, "image": "https://solederlego8-a11y.github.io/ai-shain-lp/ogp.jpg"}
+</script>
+<!-- faq-schema -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "点呼そのものをAIで代行できますか。", "acceptedAnswer": {"@type": "Answer", "text": "点呼は運行管理者が行う業務であり、AIが代行するものではありません。本記事で扱うのは、点呼の結果や運行内容の「記録の下書き」をAIが作り、運行管理者が確認・承認する形です。点呼の実施方法（対面・IT点呼など）の要件は、国土交通省の案内で確認してください。"}}, {"@type": "Question", "name": "ドライバーがスマートフォンの操作に慣れていなくても使えますか。", "acceptedAnswer": {"@type": "Answer", "text": "帰庫後に音声メモで話す、決まった書式のメモを写真で送るといった、普段の操作に近い形にすれば始めやすくなります。最初は1台・1人のドライバーで試し、負担が増えていないかを確認しながら広げてください。"}}, {"@type": "Question", "name": "デジタコのデータがある場合も、別途入力が必要ですか。", "acceptedAnswer": {"@type": "Answer", "text": "運行の時刻や走行距離はデジタコ等の記録と突き合わせる前提で運用します。AIの下書きは、積み荷・納品先での出来事・特記事項など、機器では記録できない内容の文章化に向いています。二重入力にならないよう、どのデータを正とするかを先に決めておきます。"}}, {"@type": "Question", "name": "荷主への提出書類にも使えますか。", "acceptedAnswer": {"@type": "Answer", "text": "様式と記入例があれば、その項目に合わせて下書きを作る形は検討できます。ただし提出前の確認と最終的な責任は自社にあります。荷主ごとに様式が違う場合は、様式ごとにルールを整理する必要があります。"}}]}
+</script>
+</head>
+<body>
+
+<header class="b-header">
+  <div class="b-header-inner">
+    <a class="b-logo" href="../index.html"><span class="mark">🪄</span><span>AI社員</span></a>
+    <nav class="b-nav" aria-label="ナビゲーション">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#company">運営会社</a> <a href="https://solederlego8-a11y.github.io/">運営メディア一覧</a>
+      <a href="index.html">ブログ</a>
+    </nav>
+    <a class="b-cta" href="../index.html#contact">無料個別相談 →</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="index.html">← ブログ一覧</a> ／ 業務自動化</p>
+    <h1>運送会社の運行日報・点呼記録をAIで下書きする前に —<br>ドライバーの記録作業と、導入前に決める5つのこと</h1>
+    <p class="lead">運送業の記録は「走る仕事」が終わった後に残ります。下書きまでAI、確認と承認は運行管理者、という線引きが先です。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap article">
+    <p class="byline">AI社員 編集部</p>
+    <p><time datetime="2026-11-09">2026年11月9日</time></p>
+<div class="tldr">
+  <p><strong>この記事の結論</strong></p>
+  <ul>
+    <li>運行日報・点呼記録で時間がかかっているのは、運転そのものではなく「帰庫後に、決まった様式へ書き写す・整える」作業です。ドライバーが音声メモや箇条書きで残した内容を、AIが自社の記録様式に整える形にすると、この書き写しの時間を減らせます</li>
+    <li>点呼の実施そのものは運行管理者の業務で、AIが代わるものではありません。AIに任せるのは記録の「下書き」まで。時刻・休息期間・積載や事故に関する記載は、必ず運行管理者が確認します</li>
+    <li>自動車運転の業務には2024年4月から時間外労働の上限規制（年960時間）が適用されています（<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/gyosyu/topics/01.html" target="_blank" rel="noopener">厚生労働省</a>）。記録作業の時間を減らすことは、ドライバーの拘束時間を抑えるうえでも意味があります。導入前に「様式・入力者・確認者・保存先・例外の扱い」の5つを決めておきます</li>
+  </ul>
+</div>
+
+<p>「運送 日報 AI」「運行日報 自動作成」「点呼 記録 効率化」と検索している方は、ドライバーが帰庫後に日報を書く時間、運行管理者が記録を集めて確認する時間が、毎日の負担になっている段階だと思います。走行中の出来事はドライバーの記憶とメモの中にあり、それを事務所で様式に書き直す。月末には、その記録をもとに請求や給与の集計をする。こうした作業は、運送の本業が終わった後の時間に積み重なっていきます。</p>
+<p>この記事では、特定の製品を比較するのではなく、運送会社の運行日報・点呼記録の下書きをAIで作る仕組みと、導入前に社内で決めておくべきことを整理します。AIによる業務自動化の全体像は<a href="ai-gyomu-jidoka.html">AIで業務自動化｜中小企業の始め方・費用</a>、建設業の日報については<a href="kensetsu-nippo-ai-jidoka.html">建設業の日報をAIで自動作成する前に</a>で紹介しているため、本記事は「運送業の運行記録」に絞ります。</p>
+
+<h2>なぜ今、運送業の記録作業を見直す必要があるのか</h2>
+<p>自動車運転の業務（トラックドライバー等）には、2024年4月から時間外労働の上限規制が適用され、時間外労働の上限は年960時間とされています。あわせて、勤務終了後から次の勤務までの休息期間などを定める「自動車運転者の労働時間等の改善のための基準」（改善基準告示）も改正されました（<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/gyosyu/topics/01.html" target="_blank" rel="noopener">厚生労働省「建設業・ドライバー・医師等の時間外労働の上限規制」</a>）。</p>
+<p>運転時間そのものは、配送スケジュールや荷主の都合に左右されるため、簡単には減らせません。一方で、帰庫後の日報作成・記録の転記・集計といった事務作業は、やり方を変えることで減らせる余地があります。記録のAI化は、ドライバーと運行管理者の事務時間を減らし、休息と運行の安全に時間を使うための手段の一つです。</p>
+
+<h2>運行記録まわりの作業を分解する</h2>
+<p>運行日報・点呼記録の作成も、いくつかの作業に分けて考えると、どこにAIを使えるかが見えてきます。</p>
+<table>
+  <tr><th>作業</th><th>現状でよくある形</th><th>AIとの相性</th></tr>
+  <tr><td>運行中に記録する</td><td>手帳へのメモ、記憶</td><td>停車中の音声メモ・箇条書きで残す形に変えれば、AIが読み取れる</td></tr>
+  <tr><td>様式に整える</td><td>帰庫後に事務所で清書</td><td>高い。メモを決まった項目に振り分けて文章にできる</td></tr>
+  <tr><td>点呼の結果を記録する</td><td>点呼簿へ手書き・表計算に入力</td><td>記録の下書き作成には使える。点呼の実施自体は運行管理者が行う</td></tr>
+  <tr><td>月次の集計をする</td><td>日報を1枚ずつ見て請求・給与用に集計</td><td>高い。記録がそろっていれば、集計表の下書きを作れる</td></tr>
+  <tr><td>確認・承認する</td><td>運行管理者が内容を確認</td><td>人が行う。AIは確認しやすい形に整えるまで</td></tr>
+</table>
+<p>時間の多くを占めているのは、「様式に整える」「月次の集計」の2つであることが多いはずです。ここをAIに任せると、ドライバーは「停車中に話して、帰庫後に確認するだけ」という形に近づけます。</p>
+
+<h2>音声・メモから運行記録を作る流れ</h2>
+<p>AIで運行記録の下書きを作る場合の基本的な流れは、次のとおりです。</p>
+<ol>
+  <li><strong>運行中に記録する</strong>：納品の区切りや休憩時に、スマートフォンで音声メモを残す（例：「A倉庫に納品完了、検品待ちで30分待機、次はB工場へ」）。運転中の操作は行いません。</li>
+  <li><strong>AIが整える</strong>：音声を文字にし、自社の運行日報の項目（行先・時刻・走行距離・積み荷・待機や積み降ろしの状況・特記事項など）に振り分けて、記録の文章を作る。</li>
+  <li><strong>運行管理者が確認する</strong>：時刻・休息期間・数字の記載を、デジタコ等の記録と照らして確認し、必要なら修正して承認する。</li>
+  <li><strong>保存・共有する</strong>：承認された記録を、決められた保存先（共有フォルダ・スプレッドシート・既存のシステム）に保存する。</li>
+</ol>
+<p>大切なのは、ドライバーの負担を増やさないことです。新しいアプリの操作を覚える必要があると、忙しい運行ほど使われなくなります。普段使っているスマートフォンの音声メモやチャットに送るだけ、といった形にできるかどうかが、定着を左右します。</p>
+
+<h2>AIに任せる範囲と、運行管理者が必ず確認する項目</h2>
+<p>運行記録は、その日の運行の記録であると同時に、労働時間の管理、荷主への請求、事故時の確認の根拠にもなる記録です。AIが作った文章をそのまま承認するのではなく、次の項目は人が確認してください。</p>
+<table>
+  <tr><th>項目</th><th>人が確認する理由</th></tr>
+  <tr><td>始業・終業・休憩の時刻</td><td>労働時間と休息期間の管理の根拠になる</td></tr>
+  <tr><td>走行距離・運行の区間</td><td>請求や運行実績の確認に関わる</td></tr>
+  <tr><td>点呼に関する記載</td><td>点呼は運行管理者が実施する業務であり、記録の正確さが求められる</td></tr>
+  <tr><td>事故・故障・ヒヤリハット</td><td>安全に関わる記録は、AIを通さず人が正確に残す</td></tr>
+  <tr><td>待機・積み降ろしの状況</td><td>荷主との協議や、運賃・料金の見直しの材料になる</td></tr>
+</table>
+<p>AIは、音声が聞き取りにくい場合や、地名・荷主名などの固有名詞が多い場合に、内容を取り違えることがあります。最初のうちは、AIがよく間違える言葉を記録し、用語の一覧として登録していくと精度が上がります。</p>
+
+<h2>導入方法の3つの型</h2>
+<p>運送業の運行記録をAIで作る方法は、大きく3つの型に分けられます。具体的な費用は製品・依頼先によって異なるため、ここでは型ごとの特徴を整理します。</p>
+<table>
+  <tr><th>型</th><th>内容</th><th>向いているケース</th><th>注意点</th></tr>
+  <tr><td>汎用のAIツールを使う</td><td>音声の文字起こしと文章の整形を、汎用のAIサービスで行う</td><td>まず小さく試したい、ドライバーが数人</td><td>様式への振り分けや保存は手作業が残る。情報の取扱い条件を確認</td></tr>
+  <tr><td>運行管理のシステムを使う</td><td>デジタコ・運行管理システムの機能を使う</td><td>運行データをまとめて管理したい</td><td>自社の記録様式や荷主指定の様式に合わせられるか確認</td></tr>
+  <tr><td>自社の様式に合わせた仕組みを作る</td><td>自社の運行日報様式・集計方法・既存の保存先に合わせて組み立てる</td><td>様式が独自、荷主ごとに提出書類が違う、既存のスプレッドシートを使い続けたい</td><td>初期の設計に時間がかかる。様式や用語の整理が必要</td></tr>
+</table>
+<p>どの型でも、「今の記録の様式を変えずに済むか」「ドライバーが新しい操作を覚えずに済むか」は確認しておきたい点です。</p>
+
+<h2>導入前に決める5つのこと</h2>
+<ol>
+  <li><strong>様式</strong>：どの記録（運行日報・点呼簿・月次集計表）を対象にするか。項目の一覧と記入例を用意する。</li>
+  <li><strong>入力者と入力の方法</strong>：誰が、いつ、どの方法（音声メモ・チャット・写真）で記録を残すか。運転中に操作しない形にする。</li>
+  <li><strong>確認者</strong>：AIが作った記録を誰が確認・承認するか。確認する項目（時刻・休息期間・数字・安全）を決めておく。</li>
+  <li><strong>保存先</strong>：承認された記録をどこに保存するか。既存の共有フォルダやスプレッドシートを使い続けるか。</li>
+  <li><strong>例外の扱い</strong>：事故・故障・体調不良など、通常と違う記録が必要なときに、AIを通さずに人が書くルール。</li>
+</ol>
+<p>この5つが決まっていないままツールを入れると、「使う人と使わない人がいる」「AIが作った記録を誰も確認していない」といった状態になりがちです。まず1台の運行、1人のドライバーで試し、修正が多かった点を見直してから広げると、定着しやすくなります。</p>
+
+<h2>AI社員で運行記録の下書きを任せる場合</h2>
+<p><a href="../index.html">AI社員</a>では、採用・発信の自動化に加えて、日報・作業報告・議事録の作成も自動化の対象にしています。現場からの音声メモ・写真・箇条書きを御社の定型フォーマットに整形し、担当者は確認・承認するだけ、という「下書きまでAI、確認と承認は人」の原則で運用します。新しいシステムを入れるのではなく、いま使っているメール・スプレッドシート・チャットの中で動く形にするため、ドライバーが新しいアプリの操作を覚える必要はありません。</p>
+<p>運行記録の自動化の費用は、記録の種類・車両台数・集計の有無など、業務の内容と量によって個別にお見積りしています。<a href="../index.html#contact">無料個別相談</a>では、現在の記録の様式と作成の流れをお聞きし、どこまでをAIに任せられるかを一緒に棚卸しします。運行管理システムなど既製のツールの方が合う場合は、そのようにお伝えします。ドライバーの採用発信もあわせて考えたい方は、<a href="driver-saiyo-hasshin-ai.html">ドライバー採用の発信をAIで続ける方法 — 運送会社の求人とSNSの型</a>もご覧ください。</p>
+
+<h2>よくある質問</h2>
+<h3>Q. 点呼そのものをAIで代行できますか。</h3>
+<p>点呼は運行管理者が行う業務であり、AIが代行するものではありません。本記事で扱うのは、点呼の結果や運行内容の「記録の下書き」をAIが作り、運行管理者が確認・承認する形です。点呼の実施方法（対面・IT点呼など）の要件は、国土交通省の案内で確認してください。</p>
+<h3>Q. ドライバーがスマートフォンの操作に慣れていなくても使えますか。</h3>
+<p>帰庫後に音声メモで話す、決まった書式のメモを写真で送るといった、普段の操作に近い形にすれば始めやすくなります。最初は1台・1人のドライバーで試し、負担が増えていないかを確認しながら広げてください。</p>
+<h3>Q. デジタコのデータがある場合も、別途入力が必要ですか。</h3>
+<p>運行の時刻や走行距離はデジタコ等の記録と突き合わせる前提で運用します。AIの下書きは、積み荷・納品先での出来事・特記事項など、機器では記録できない内容の文章化に向いています。二重入力にならないよう、どのデータを正とするかを先に決めておきます。</p>
+<h3>Q. 荷主への提出書類にも使えますか。</h3>
+<p>様式と記入例があれば、その項目に合わせて下書きを作る形は検討できます。ただし提出前の確認と最終的な責任は自社にあります。荷主ごとに様式が違う場合は、様式ごとにルールを整理する必要があります。</p>
+
+<div class="note">本記事は運送業の運行記録へのAI活用に関する一般的な考え方を整理したものであり、特定の効果を保証するものではありません。労働時間の管理や法令上の記録義務、点呼の実施方法については、所管の行政機関や専門家にご確認ください。</div>
+<hr>
+    <p>関連記事：<a href="ai-gyomu-jidoka.html">AIで業務自動化｜中小企業の始め方・費用</a> ／ <a href="kensetsu-nippo-ai-jidoka.html">建設業の日報をAIで自動作成する前に</a> ／ <a href="driver-saiyo-hasshin-ai.html">ドライバー採用の発信をAIで続ける方法</a></p>
+    <a class="back" href="index.html">← ブログ一覧に戻る</a>
+
+    <div class="share" aria-label="この記事をシェア">
+      <span class="share-label">シェア：</span>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=%E9%81%8B%E9%80%81%E4%BC%9A%E7%A4%BE%E3%81%AE%E9%81%8B%E8%A1%8C%E6%97%A5%E5%A0%B1%E3%83%BB%E7%82%B9%E5%91%BC%E8%A8%98%E9%8C%B2%E3%82%92AI%E3%81%A7%E4%B8%8B%E6%9B%B8%E3%81%8D%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Funyu-unko-nippo-tenko-ai.html">X</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Funyu-unko-nippo-tenko-ai.html&amp;title=%E9%81%8B%E9%80%81%E4%BC%9A%E7%A4%BE%E3%81%AE%E9%81%8B%E8%A1%8C%E6%97%A5%E5%A0%B1%E3%83%BB%E7%82%B9%E5%91%BC%E8%A8%98%E9%8C%B2%E3%82%92AI%E3%81%A7%E4%B8%8B%E6%9B%B8%E3%81%8D%E3%81%99%E3%82%8B%E5%89%8D%E3%81%AB">はてブ</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Funyu-unko-nippo-tenko-ai.html">LINE</a>
+      <a class="share-btn" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsolederlego8-a11y.github.io%2Fai-shain-lp%2Fblog%2Funyu-unko-nippo-tenko-ai.html">Facebook</a>
+      <button type="button" class="share-btn share-copy" data-url="https://solederlego8-a11y.github.io/ai-shain-lp/blog/unyu-unko-nippo-tenko-ai.html">リンクをコピー</button>
+    </div>
+    <script src="share.js"></script>
+
+    <div class="cta-box">
+      <p>「うちは何から直すべきか」を30分で整理します</p>
+      <a class="btn" href="../index.html#contact">無料個別相談を予約する</a>
+    </div>
+  </div>
+</main>
+
+<footer class="b-footer">
+  <div class="b-footer-inner">
+    <div>
+      <p class="b-foot-brand">🪄 AI社員</p>
+      <p style="font-size:13px;color:#9AA6BB;margin:0;max-width:32em">中小企業の採用・発信をチームの戦力化で解決するAIキャラクターサービス。</p>
+    </div>
+    <div class="b-foot-links">
+      <a href="../index.html#top">サービス紹介</a>
+      <a href="../index.html#privacy">プライバシーポリシー</a>
+      <a href="../index.html#tokutei">特定商取引法に基づく表記</a>
+      <a href="../index.html#company">運営会社</a>
+      <a href="index.html">ブログ</a>
+      <a href="editorial-policy.html">編集方針</a>
+    </div>
+  </div>
+  <div class="b-foot-bottom">© 2026 AI社員 All rights reserved.</div>
+</footer>
+
+</body>
+</html>
