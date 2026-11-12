@@ -240,4 +240,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://solederlego8-a11y.github.io/ai-shain-lp/blog/seisei-ai-shanai-rule-chusho-kimeru-10koumoku.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solederlego8-a11y.github.io/ai-shain-lp/blog/shain-kaodashi-saiyo-douga-doui-taishoku-go.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

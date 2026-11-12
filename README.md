@@ -51,5 +51,13 @@ GitHub Pages で公開しています。
 - [FAX注文のAI入力・転記を外注する前に｜電子取引の保存と確認の線引き](https://solederlego8-a11y.github.io/ai-shain-lp/blog/fax-chumon-ai-nyuryoku-tenki-jidoka.html)
 - [従業員5人以下のAI導入は月額いくらから？発信と業務の費用の分かれ目](https://solederlego8-a11y.github.io/ai-shain-lp/blog/shoki-5nin-ika-ai-shain-hiyo.html)
 - [社内マニュアル・過去案件をAIで検索する前に｜営業秘密と整理の順番](https://solederlego8-a11y.github.io/ai-shain-lp/blog/manual-kako-anken-ai-kensaku-zokujinka.html)
+- [求人票をAIで下書きする前に｜2024年4月から追加された労働条件明示3項目の書き方](https://solederlego8-a11y.github.io/ai-shain-lp/blog/kyujin-hyo-ai-sakusei-rodo-joken-meiji-3koumoku.html)
+- [SNSで求人を出すときに必ず載せる6項目｜職業安定法の的確表示と書き方](https://solederlego8-a11y.github.io/ai-shain-lp/blog/sns-kyujin-boshu-hissu-hyoji-6joho.html)
+- [応募者の履歴書を生成AIに入力してよい？個人情報保護委員会の注意点と採用担当の確認表](https://solederlego8-a11y.github.io/ai-shain-lp/blog/oubosha-rirekisho-seiseiai-nyuryoku-kojin-joho.html)
+- [AI生成画像を求人・SNSに使う前に｜文化庁の考え方で整理する著作権の確認ポイント](https://solederlego8-a11y.github.io/ai-shain-lp/blog/ai-seisei-gazou-kyujin-sns-chosakuken-kakunin.html)
+- [SNSプレゼントキャンペーンの景品はいくらまで？景品表示法の上限とオープン懸賞の見分け方](https://solederlego8-a11y.github.io/ai-shain-lp/blog/sns-present-campaign-keihin-jougen-keihyoho-chusho.html)
+- [中小企業のSNS投稿に「PR」表示は必要？ステマ規制の判断表と表示の例](https://solederlego8-a11y.github.io/ai-shain-lp/blog/sns-pr-hyoji-suteuma-kisei-chusho-kigyo-handan.html)
+- [生成AIの社内ルールは中小企業で何を決める？公的資料をもとにした10項目の表](https://solederlego8-a11y.github.io/ai-shain-lp/blog/seisei-ai-shanai-rule-chusho-kimeru-10koumoku.html)
+- [社員の顔を採用動画・SNSに出すとき同意書は要る？退職後の扱いと時点別の確認表](https://solederlego8-a11y.github.io/ai-shain-lp/blog/shain-kaodashi-saiyo-douga-doui-taishoku-go.html)
 
 <!-- article-index:end -->
