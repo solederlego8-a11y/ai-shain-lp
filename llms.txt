@@ -1,0 +1,17 @@
+# AI社員
+
+> 建設業・製造業など中小企業向けのAI業務自動化サービス。採用・発信の自動化に加え、日報・見積書・問い合わせ一次対応・転記入力などの定型業務をAIで自動化する。最短14営業日で導入。運営：編集部。最終更新日：2026-11-16。
+
+## 主要ページ
+
+- [トップ](https://solederlego8-a11y.github.io/ai-shain-lp/)
+- [資料](https://solederlego8-a11y.github.io/ai-shain-lp/materials.html)
+- [ブログ](https://solederlego8-a11y.github.io/ai-shain-lp/blog/)
+
+## 記事（代表）
+
+- [AI社員 制作ガイド](https://solederlego8-a11y.github.io/ai-shain-lp/blog/ai-shain-seisaku-guide.html)
+- [建設・製造のSNS採用](https://solederlego8-a11y.github.io/ai-shain-lp/blog/kensetsu-seizo-sns-saiyo.html)
+- [AIで業務を自動化する方法](https://solederlego8-a11y.github.io/ai-shain-lp/blog/ai-gyomu-jidoka.html)
+- [問い合わせ一次対応のAI自動化](https://solederlego8-a11y.github.io/ai-shain-lp/blog/toiawase-ichiji-taiou-ai-jidoka.html)
+- [建設業の日報をAIで自動化](https://solederlego8-a11y.github.io/ai-shain-lp/blog/kensetsu-nippo-ai-jidoka.html)
